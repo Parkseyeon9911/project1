@@ -1,0 +1,99 @@
+
+<!--다음은 클래스는 _, 아이디는 대문자로 구분-->
+<!--https://nykim.work/30-->
+<!--https://ideveloper2.tistory.com/150-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LEICA :: EMOTIONAL CAMERA</title>
+    <link rel="shortcut icon" type="image/x-icon"  href="favicon.ico">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+
+   <!--    폰트-->
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common/css/common.css">
+<link rel="stylesheet" href="common/css/header.css">
+<link rel="stylesheet" href="common/css/footer.css">
+<link rel="stylesheet" href="common/css/skipnav.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="common/js/common.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+<? include "common/common.html" ?>
+<? include "common/header.html" ?>
+<div class="header_bottom"></div>
+    <div class="indicate"></div>
+    <div class="scroll_focus">
+        <div class="scroll_fc_tplf"></div>
+        <div class="scroll_fc_tprg"></div>
+        <div class="scroll_fc_btlf"></div>
+        <div class="scroll_fc_btrg"></div>
+    </div>
+<!--    섹션-->
+    <section>
+           <h2 class="hidden">라이카</h2>
+<!--        아티클 1 / 기업 비디오 -->
+<!--        메인 비디오-->
+        <article id="content1" class="display1">
+            <div class="video_over">
+			    <video src="video/main_leica.mp4" autoplay muted loop></video>
+                <h3 class="video_name">라이카 브랜드 아이덴티티 영상</h3>
+                <p class="video_title bold">PICTURES FOR ETERNITY</p>
+           </div>
+        </article>
+        
+        
+<!--        아티클 2 / 모노크롬 -->
+        <article id="content2" class="display2">
+        <h3 class="hidden">신제품 소개, LEICA M10 MONOCHROM</h3>
+          <p class="bold">LEICA<br> M10 MONOCHROM</p>
+           <p>The Leica M10 Monochrom opens the door<br> to a new dimension of black-and-white photography. </p>
+           <a href="product.php?pd=m10" class="learn_more">LEARN MORE</a>
+            <div class="dp2_background"></div>
+        </article>
+        
+        
+        
+<!--        아티클 3 / 슬라이드 전제품 -->
+        <article id="content3" class="display3">
+        <h3 class="hidden">브랜드 대표 제품 슬라이드</h3>
+        <img src="image/dp3_slide_s3.png" alt="카메라" class="camera_img">
+        <img src="image/dp3_background1.jpg" alt="카메라 사진" class="dp3_background">
+       <div class="slide_shortcut">
+        <ul>
+            <li><a href="#">
+                <img src="image/dp3_slide_s3.png" alt="라이카 S3"><span class="txt">Leica S3</span>
+            </a></li>
+            <li><a href="#">
+                <img src="image/dp3_slide_sl2.png" alt="라이카 SL2"><span class="txt">Leica SL2</span>
+            </a></li>
+            <li><a href="#">
+                <img src="image/dp3_slide_m10.png" alt="라이카 M10 MONOCHROM"><span class="txt">Leica M10</span>
+            </a></li>
+            <li><a href="#">
+                <img src="image/dp3_slide_q.png" alt="라이카 Q"><span class="txt">Leica Q</span>
+            </a></li>
+            <li><a href="#">
+                <img src="image/dp3_slide_vlux5.png" alt="라이카 V-LUX5"><span class="txt">Leica V-LUX5</span>
+            </a></li>
+        </ul>
+       </div>
+        </article>
+<!--        아티클 4 / 아카데미-->
+        <article id="content4" class="display4">
+        <h3 class="hidden">라이카 아카데미 소개</h3>
+              <div class="shutter"></div>
+              <p class="bold">NO BETTER WAY TO<br>LEARN LEICA</p>
+               <p>The Akademie’s goal is to increase the fun<br> and enjoyment of photography. </p>
+               <a href="academy.html" class="learn_more">BOOK NOW</a>
+               <div class="dp4_mainbn"></div>
+        </article>
+    </section>
+</body>
+</html>

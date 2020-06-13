@@ -1,0 +1,155 @@
+        header{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 140px;
+            background: #000;
+            z-index: 100;
+/*            border-bottom: 2px solid #000;*/
+/*
+            background: url(../image/header/nav_background.jpg) center center no-repeat;
+            background-size: cover;
+*/
+        }
+
+        .header_bottom{
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 70px;
+            background: #000;
+            z-index: 100;
+            display: block;
+            border-top: 2px solid #000;
+        }
+        
+        
+        
+        .logo a{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            top: 10px;
+            margin-left: -35px;
+            display: block;
+            width: 70px;
+            height: 70px;
+            text-indent: -1000%;
+            overflow: hidden;
+            background: url(../image/logo/leica_circle_logo.png) no-repeat;
+        }
+
+        #globalNavbar{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-top: 80px;
+            margin-left: -300px;
+            width: 600px;
+            height: 50px;
+        }
+        
+        
+        #globalNavbar .quick_menu{
+            position: relative;
+            float: left;
+            list-style: none;
+        }
+        
+        
+        .quick_area{
+            overflow: hidden;
+        }
+
+        
+        .quick_area a{
+            display: block;
+            width: 120px;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+            font-size: 15px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px rgba(255,255,255,0.5);
+        }
+
+        .depth2_box a{
+            color: #000;
+/*            text-shadow: 0px 0px 3px rgba(0,0,0,0.5);*/
+            text-shadow: none;
+        }
+
+        .quick_mypage{
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            margin-left: 448px;
+            overflow: hidden;
+            width: 152px;
+            height: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .quick_mypage li{
+            float: left;
+            width: 75px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .quick_mypage li:nth-of-type(2){
+            border-left: 2px solid #fff;
+        }
+
+        .quick_mypage a{
+/*
+            display: block;
+            width: 50px;
+            height: 70px;
+            text-align: center;
+            opacity: 0;
+*/
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+        }
+
+
+
+        .sub_menu{
+            position: fixed;
+            left: 0;
+            top: 140px;
+            width: 100%;
+            height: 300px;
+            background-color: #e1262a;
+            display: none;
+            z-index: 100;
+        }
+
+        .depth2_box{
+            display: none;
+        }
+
+
+/*
+        .header_grident{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left:-600px;
+            width: 1200px;
+            height: 130px;
+background: #aaaaaa;
+background: -moz-linear-gradient(left,  #aaaaaa 0%, #ffffff 6%, #ffffff 10%, #969696 17%, #e3e3e3 28%, #e3e3e3 82%, #aaaaaa 89%, #ffffff 96%, #aaaaaa 100%);
+background: -webkit-linear-gradient(left,  #aaaaaa 0%,#ffffff 6%,#ffffff 10%,#969696 17%,#e3e3e3 28%,#e3e3e3 82%,#aaaaaa 89%,#ffffff 96%,#aaaaaa 100%);
+background: linear-gradient(to right,  #aaaaaa 0%,#ffffff 6%,#ffffff 10%,#969696 17%,#e3e3e3 28%,#e3e3e3 82%,#aaaaaa 89%,#ffffff 96%,#aaaaaa 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aaaaaa', endColorstr='#aaaaaa',GradientType=1 );
+z-index:-10;
+        }
+*/

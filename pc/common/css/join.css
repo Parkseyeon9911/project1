@@ -1,0 +1,290 @@
+
+
+html,body{
+    height: auto;
+}
+
+
+section{
+    position: relative;
+    top: 140px;
+    width: 100%;
+    height: auto;
+    background-color: #1e1e1e;
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+
+    article{
+        position: relative;
+        top: 0;
+        left: 50%;
+        width: 1200px;
+        height: 780px;
+        margin-left: -600px;
+        background-color: #272727;
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+        overflow: hidden;
+    }
+
+
+    input[type="checkbox"]{
+        display: none;
+    }
+
+
+
+
+        .title{
+            position: relative;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title img{
+            margin-top: 30px;
+            width: 150px;
+        }
+
+
+        .join_title{
+            margin-top: 5px;
+            color: #fff;
+            letter-spacing: 10px;
+        }
+
+    fieldset{
+        position: relative;
+        width: 800px;
+        height: 170px;
+        margin: 0 200px;
+        border: none;
+    }
+
+
+
+    fieldset label{
+        width: 800px;
+        height: 50px;
+        display: block;
+        line-height: 50px;
+        color: #fff;
+    }
+
+    .bt_fieldset{
+        margin-top: 30px;
+    }
+
+    .pp_agr_icon{
+/*        position: relative;*/
+        width: 50px;
+        height: 50px;
+        background: url(../image/icon/chk_box.png) no-repeat;
+        background-size: 50px 50px;
+        float: left;
+    }
+
+
+    .pp_agr_txt{
+        margin-left: 80px;
+    }
+
+
+    .scr_pp_all{
+
+            width: 800px;
+            height: 100px;
+            line-height: 20px;
+            color: #3c3c3c;
+            font-size: 12px;
+            overflow-x:hidden;
+            overflow-y:scroll;
+            background-color: #383838;
+            border: 1px solid #3c3c3c;
+            color: #fff;
+            text-align:left;
+            box-sizing: border-box;
+    }
+
+
+        .scr_pp_all::-webkit-scrollbar{width: 10px;}
+        
+        .scr_pp_all::-webkit-scrollbar-track {background-color:none;}
+        
+        .scr_pp_all::-webkit-scrollbar-thumb {background-color:none;
+            border: 1.5px solid #e1262a; border-radius: 5px;
+        box-sizing: border-box;}
+
+
+
+        #agr_nxt{
+            position: relative;
+            left: 300px;
+            width: 200px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: #e1262a;
+            border: none;
+            color: #fff;
+            line-height: 60px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+
+
+
+
+
+
+        input[type="text"],input[type="password"]{
+            width: 740px;
+            padding: 0px 30px;
+            height: 50px;
+            border: none;
+/*            border-bottom: 1px solid #fff;*/
+            border-radius: 25px;
+            font-size: 20px;
+            color: #fff;
+            background-color: #383838;
+        }
+
+
+
+        form > fieldset > label{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding-left: 30px;
+            width: 400px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            color: #fff;
+            transition: 0.5s;
+            z-index: 1;
+        }
+
+
+
+        form fieldset{
+            height: 80px;
+        }
+        .pp_all label{
+            margin: 10px 0px;
+        }
+
+
+
+
+
+        #pp_agr_all:checked ~ .pp_all label[for="pp_agr_all"] .pp_agr_icon{
+            background: url(../image/icon/chk_box_c.png);
+            background-size: 50px 50px;
+        } 
+
+
+        #pp_agr_1:checked ~ .pp_all label[for="pp_agr_1"] .pp_agr_icon{
+            background: url(../image/icon/chk_box_c.png);
+            background-size: 50px 50px;
+        } 
+
+
+        #pp_agr_2:checked ~ .pp_all label[for="pp_agr_2"] .pp_agr_icon{
+            background: url(../image/icon/chk_box_c.png);
+            background-size: 50px 50px;
+        } 
+
+
+
+
+        .info_name_gd label[for="name"]{
+            width: 240px;
+        }
+
+        .info_name_gd input{
+            width: 240px;
+            float: left;
+        }
+
+
+        .info_name_gd label[for="gender"]{
+            padding: 0;
+            position: relative;
+            float: left;
+            width: 250px;
+            display: block;
+            text-align: center;
+            }
+
+        .info_name_gd select, .phonecall select, .birthd select{
+            position: relative;
+            float: left;
+            height: 50px;
+            border-radius: 25px;
+            font-size: 20px;
+            text-indent: 30px;
+            background-color: #383838;
+            border: none;
+            color: #fff;
+        }
+
+        .info_name_gd select{
+            width: 250px;
+        }
+
+
+
+        .phonecall label[for="phonecall"], .birthd label[for="birthday"]{
+            top: -30px;
+            left: 0;
+            height: 30px;
+            font-size: 15px;
+            line-height: 40px;
+        }
+
+
+
+        .phonecall select{
+            width: 240px;
+        }
+
+
+        .phonecall input[type="text"]{
+            width: 200px;
+            margin-left: 20px;
+            float: left;
+        }
+
+
+
+        .birthd select{
+            width: 240px;
+        }
+
+
+        .birthd select:nth-of-type(2), .birthd select:nth-of-type(3){
+            width: 260px;
+            margin-left: 20px;
+        }
+
+
+
+        #create{
+            position: relative;
+            left: 50%;
+            width: 200px;
+            margin-left: -100px;
+            margin-top: 30px;
+            height: 60px;
+            border-radius: 30px;
+            background-color: #e1262a;
+            border: none;
+            color: #fff;
+            line-height: 60px;
+            font-size: 20px;
+            text-align: center;
+        }

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>NASA :: SPACE</title>
+<link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="app_icon.png">
+<link rel="apple-touch-startup-image" href="startup.png">
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/layout.css">
+
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/video.js"></script>
+
+<script>
+	// <![CDATA[
+		try {
+			window.addEventListener('load', function(){
+	    	    setTimeout(scrollTo, 0, 0, 1); 
+	    	}, false);
+		} catch(e) {}
+	// ]]>
+</script>
+<!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+   <div id="wrap">
+	<div class="videoBox">
+			<video autoplay loop="100" muted   id="videoBG">
+				 <source src="images/aaa.mp4" type="video/mp4">
+			</video>
+			<img src="images/back.jpg" id="imgBG">
+			
+			<a class="down" href="#">SCROLL DOWN</a>
+	</div>
+	
+	<header id="headerArea">
+	  <div class="headerInner">
+		  <h1><a href="#">로고</a></h1>
+		  <nav id="gnb">
+		  	 <ul>
+		  	 	<li><a href="#">menu01</a></li>
+		  	 	<li><a href="#">menu02</a></li>
+		  	 	<li><a href="#">menu03</a></li>
+		  	 	<li><a href="#">menu04</a></li>
+		  	 </ul>
+		  </nav>
+		</div>
+	</header>
+	
+	<article id="content">
+			<div class="space_ship_fix"></div>
+	</article>
+	
+	<footer id="footerArea">
+	    푸터 콘텐츠
+	</footer>
+</div>		
+</body>
+</html>

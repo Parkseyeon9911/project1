@@ -1,0 +1,733 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>NASA :: SPACE</title>
+<link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="app_icon.png">
+<link rel="apple-touch-startup-image" href="startup.png">
+<link rel="stylesheet" href="css/common.css">
+<!--<link rel="stylesheet" href="css/layout.css">-->
+
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/video.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+
+<script>
+	// <![CDATA[
+		try {
+			window.addEventListener('load', function(){
+	    	    setTimeout(scrollTo, 0, 0, 1); 
+	    	}, false);
+		} catch(e) {}
+	// ]]>
+</script>
+<!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+
+<style>
+    
+    .cinzel{
+        font-family: 'Cinzel', serif;
+    }
+    
+    
+    #wrap{
+        width: 100%;
+        height: 100%;
+    }
+    
+    section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    article{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0)
+    }
+    
+    article:nth-of-type(1){
+        background-color: #000;
+    }
+    
+    .video_over{
+        width:100%;height:100%; overflow:hidden; position:absolute
+    }
+    
+    .display1 video{position:absolute;
+   left:50%;
+   top:50%;
+   width:auto;
+   min-width:100%;
+   height:auto;
+   min-height:100%;
+  transform:translateX(-50%) translateY(-50%);
+   overflow: hidden;
+    }
+    
+    
+    .display1{
+        display: flex;
+        align-items: center;
+    }
+    
+    .dp1_title{
+        position: fixed;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 3em;
+        z-index: 10;
+        color: #fff;
+        transition: 0.5s;
+    }
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #000;
+        z-index: 100;
+    }
+    
+    #headerArea{
+        width: 300px;
+        height: 70px;
+        background-color: #fc3d21;
+        float: left;
+    }
+
+    .logo{
+        overflow: hidden;
+    }
+    
+    .logo a{
+        text-indent: -1000%;
+        display: block;
+        width: 100px;
+        height: 50px;
+        overflow: hidden;
+        margin: 10px auto;
+        background: url(images/header_logo_2x.png) no-repeat;
+    }
+    
+    .sitemap{
+    display: block;
+    margin: 10px 0 10px 100px;
+    width: 50px;
+    height: 50px;
+    z-index: 100;
+    float: left;
+    background: url(images/sitemap_2x.png) no-repeat;
+    background-size: 50px 50px;
+}
+
+    .closemap {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    opacity: 1;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    background: url(../image/icon/close.png) no-repeat;
+    z-index: 90;
+    transition: 1s;
+}
+    
+    
+    #gnb{
+        margin-left: 300px;
+        width: auto;
+        height: 70px;
+    }
+    
+    #gnb ul{
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        width: 40%;
+        height: 70px;
+        overflow: hidden;
+    }
+    
+    #gnb ul li{
+        float: left;
+        width: 25%;
+        height: 70px;
+        line-height: 70px;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    #gnb ul li a{
+        text-decoration: none;
+        color: #fff;
+        letter-spacing: 1px;
+    }
+    
+    
+    footer{
+        position: relative;
+        width: 100%;
+        height: 250px;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    
+    .ft_logo{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 30px;
+        background: url(images/footer_logo_2x.png) no-repeat;
+        background-size: 100px 100px;
+    }
+    
+    .company{
+        display: block;
+        color: #fff;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+    }
+    
+    .ceo{
+        display: block;
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    
+    .copyright{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 0.8em;
+    }
+    
+    
+    .space_ship_fix{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(images/main_spaceship.png) center center no-repeat;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .dp1_background{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(images/dp1_background2.jpg) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .dp2_title{
+        position: relative;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        display: block;
+        color: #000;
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    .dp2_subj{
+        position: relative;
+        top: 30%;
+        left: 30%;
+        width: 40%;
+        text-align: center;
+        display: block;
+        font-size: 1.3em;
+        color: #000;
+    }
+    
+    .dp2_background{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background: url(images/dp2_background.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .display3{
+        height: 200%;
+    }
+    
+    .dp3_layout_box{
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    .dp3_lf_depth{
+        width: 50%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+    }
+    
+    
+    .dp3_rg_depth{
+        margin-top: 9%;
+        width: 50%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .dp3_lf_depth li{
+        float: right;
+        display: block;
+        margin: 1% 0;
+    }
+    
+    .dp3_rg_depth li{
+        display: block;
+        margin: 2%;
+    }
+    
+    .vertical_layout{
+        width: 40%;
+        padding-top: 60%;
+    }
+    
+    .horizontal_layout{
+        width: 80%;
+        padding-top: 40%;
+    }
+    
+    
+    .dp3_lf_depth li:nth-of-type(1){
+        background:url(images/dp3_layout1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(1):before{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(3):before{
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(2):before{
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        margin-left: 3%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+        text-align: right;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(2){
+        background:url(images/dp3_layout2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(3){
+        background:url(images/dp3_layout3.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(1){
+        background:url(images/dp3_layout4.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(2){
+        background:url(images/dp3_layout5.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(3){
+        background:url(images/dp3_layout6.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    
+    .dp4_title{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        margin-top: -2em;
+        font-size: 2em;
+        text-align: center;
+        z-index: 20;
+        letter-spacing: 2px;
+    }
+    
+    
+    .dp5_layout_box{
+        width: 80%;
+        height: auto;
+        display: block;
+        width: auto 10%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    
+    
+    
+    .display5{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .dp5_li_depth1{
+        position: relative;
+        width: 24.5%;
+        height: 500px;
+        float: left;
+        display: block;
+        display: flex;
+        overflow: hidden;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1){
+        align-items: flex-start;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(2){
+        background: url(images/dp5_layout3.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(3){
+        background: url(images/dp5_layout4.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(4){
+        align-items: flex-end;
+    }
+    
+    
+    
+    
+    
+    
+    .dp5_li_depth1 ul{
+        overflow: hidden;
+        width: 100%;
+        display: block;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li{
+        width: 100%;
+        height: 150px;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(1):after{
+        content: "NASA's Story is a documentary series by Dangerous Films for the BBC to commemorate 50 years since the formation of NASA.";
+        color: #fff;
+        font-size: 1em;
+        clear: both;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(4):after{
+        content: "NASA's Story is a documentary series by Dangerous Films for the BBC to commemorate 50 years since the formation of NASA.";
+        color: #fff;
+        font-size: 1em;
+        clear: both;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li:nth-of-type(1){
+        width: 100%;
+        background: url(images/dp5_layout1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li:nth-of-type(2){
+        width: 100%;
+        background: url(images/dp5_layout2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li{
+        width: 100%;
+        height: 150px;
+    }
+    .dp5_li_depth1:nth-of-type(4) li:nth-of-type(1){
+        width: 100%;
+        background: url(images/dp5_layout5.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li:nth-of-type(2){
+        width: 100%;
+        background: url(images/dp5_layout6.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+</style>
+</head>
+
+<body>
+<header>
+   <div id="headerArea">
+    <a href="#" class="sitemap"><span class="hidden">Global Navigation Open</span></a>
+    
+    <h1 class="logo">
+            <a href="#">NASA LOGO</a>
+    </h1>
+    
+    </div>
+    <nav id="gnb">
+        <ul>
+            <li><a href="">MISSION</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="">ABOUT&nbsp;US</a></li>
+            <li><a href="">SUPPORT</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="wrap">
+	<section>    
+        <article class="display1" id="content1">
+            <div class="video_over">
+			    <video src="video/main_video.mp4" autoplay muted loop></video>
+           </div>
+            <p class="dp1_title bold cinzel">To discover and expand knowledge<br> for the benefit of humanity.</p>
+	</article>
+<!--
+	<article class="display1" id="content1">
+	</article>
+-->
+	<article class="display2" id="content2">
+       <div class="dp2_background"></div>
+        <p class="dp2_title bold cinzel">NASA VISION.</p>
+        <p class="dp2_subj">NASA's Vision leads to a future with an American-made launch capability supporting cutting-edge science, technology, and human exploration with strong technology and aeronautics programs. We will continue to push the frontier of space. We will develop new technologies for use in air, space, and on the ground.</p>
+	</article>
+	<article class="display3" id="content3">
+	    <div class="dp3_layout_box">
+	        <ul class="dp3_lf_depth">
+	            <li class="vertical_layout"></li>
+	            <li class="horizontal_layout"></li>
+	            <li class="vertical_layout"></li>
+	        </ul>
+	        <ul class="dp3_rg_depth">
+	            <li class="horizontal_layout"></li>
+	            <li class="vertical_layout"></li>
+	            <li class="horizontal_layout"></li>
+	        </ul>
+	    </div>
+	    
+	    
+	</article>
+	<article class="display4" id="content4">
+       <p class="dp4_title cinzel">NASA studies Earth to learn how it changes. <br>Some of the changes are natural.</p>
+        <div class="dp1_background">
+            <div class="space_ship_fix"></div>
+        </div>
+	</article>
+	<article class="display5" id="content5">
+        <ul class="dp5_layout_box">
+            <li class="dp5_li_depth1">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+            <li class="dp5_li_depth1">
+                <img src="" alt="">
+            </li>
+            <li class="dp5_li_depth1"></li>
+            <li class="dp5_li_depth1">
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </li>
+        </ul>
+	</article>
+	<footer id="footerArea">
+                <div class="ft_logo"></div>
+	            <p class="company bold">National Aeronautics and Space Administration</p>
+	            <p class="ceo">Administrator : Jim Bridenstine<br>Adress : 12600 NASA Rd, Las Cruces, NM 88012</p>
+                <p class="copyright">Copyright&copy; 2020. National Aeronautics and Space Administration All right reserved</p>
+	</footer>
+	</section>
+	
+</div>		
+
+<script>
+    
+
+    $(document).ready(function(){
+        
+            var dp1_titleHg = $('.dp1_title').height()
+            
+            $('.dp2_subj').css({
+                marginTop:dp1_titleHg
+            })
+        
+            $('.dp3_lf_depth, .dp3_rg_depth').children().addClass('objscale_ani')
+        
+        $(window).scroll(function(){
+            var now_scroll = $(window).scrollTop()
+            
+            if(now_scroll > $('article:nth-of-type(1)').height()/2){
+                
+                $('.dp1_title').css({
+                    color:'#000'
+                })
+            }
+            
+            else{
+                $('.dp1_title').css({
+                    color:'#fff'
+                })
+            }
+            if(now_scroll > $('article:nth-of-type(2)').offset().top){
+                var dp2_titleHg = $('.dp2_title').offset().top+$('.dp2_title').height()
+                $('.dp1_title').css({
+                    position:'absolute',
+                    top:dp2_titleHg
+                })
+            }
+            else{
+                $('.dp1_title').css({
+                    position:'fixed',
+                    top:'auto'
+                })
+            }
+            
+            if(now_scroll > $('article:nth-of-type(3)').offset().top+($('article:nth-of-type(3)').height()/4)){
+               var black_acc = (now_scroll-$('article:nth-of-type(3)').offset().top)/50/50
+//               console.log(black_acc)
+               
+               $('article').css({
+                   backgroundColor:'rgba(0,0,0,'+black_acc+')'
+               })
+            }
+            else{
+                $('article').css({
+                   backgroundColor:'rgba(0,0,0,0)'
+               })
+            }
+            
+            
+            
+        $('.dp3_lf_depth li').each(function(i,ee){
+            if(now_scroll > $('.dp3_lf_depth li').eq(i).offset().top-parseInt($('.dp3_lf_depth li').eq(i).outerHeight())){
+            $('.dp3_lf_depth li').eq(i).addClass('running')
+        }
+        })
+            
+            
+        $('.dp3_rg_depth li').each(function(i,ee){
+            if(now_scroll > $('.dp3_rg_depth li').eq(i).offset().top-parseInt($('.dp3_rg_depth li').eq(i).outerHeight())){
+            $('.dp3_rg_depth li').eq(i).addClass('running')
+        }
+        })
+            
+        })
+        
+        
+                                   
+        
+        
+        
+        
+//		var screenHeight = $(window).height();
+//        
+//        $('header').css({
+//            height:screenHeight
+//        })
+//        
+//        $(window).resize(function(){
+//            
+//        $('header').css({
+//            height:screenHeight
+//        })    
+//    })
+        
+    })
+    
+</script>
+</body>
+</html>

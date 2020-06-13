@@ -1,0 +1,502 @@
+
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body::-webkit-scrollbar{
+            width: 0 !important
+        }
+
+
+
+/*포커스 애니메이션*/
+        
+        @keyframes focus_on{
+            0%{
+                opacity: 1;
+                margin-left: -150px;
+                margin-top: -150px;
+                width: 300px;
+                height: 300px;
+            }
+            
+            25%{
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
+            }
+            
+            50%{
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
+            }
+            
+            75%{
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
+            }
+            
+            100%{
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
+                opacity: 1;
+            }
+            
+            
+        }
+        
+        @keyframes focus_resize{
+            
+            0%{
+                width: 80px;
+                height: 80px;
+                border-color: #f00;
+                border-width: 3px;
+            }
+            
+            25%{
+                width: 75px;
+                height: 75px;
+                margin: 0;
+                border-color: #fff;
+                border-width: 3px;
+                opacity: 1;
+            }
+            
+            50%{
+                width: 75px;
+                height: 75px;
+                margin: 0;
+                border-color: #fff;
+                border-width: 3px;
+                opacity: 0;
+            }
+            
+            75%{
+                width: 75px;
+                height: 75px;
+                margin: 0;
+                border-color: #fff;
+                border-width: 3px;
+                opacity: 1;
+            }
+            
+            100%{
+                width: 75px;
+                height: 75px;
+                margin: 0;
+                border-color: #fff;
+                border-width: 3px;
+                opacity: 1;
+            }
+        }
+
+
+
+
+
+/* 셔터 애니메이션 */
+@keyframes cam_shutter{
+    0%{width: 1px;
+        height: 1px;
+    }
+    
+    1%{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 100;
+    }
+    
+    50%{
+        opacity: 0;
+    }
+    
+    75%{
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+
+.focus_blur{
+            filter:blur(30px);
+              -webkit-filter: blur(30px);
+        }
+        
+        .scroll_focus{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            z-index: 100;
+            opacity: 0;
+            display:none;
+            animation-name: focus_on;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+        }
+        
+        .scroll_fc_tplf{
+            width: 80px;
+            height: 80px;
+            border-top: 3px solid #f00;
+            border-left: 3px solid #f00;
+            box-sizing: border-box;
+            float: left;
+            display:none;
+            margin-bottom: 140px;
+            animation-name: focus_resize;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        
+        
+        .scroll_fc_tprg{
+            width: 80px;
+            height: 80px;
+            border-top: 3px solid #f00;
+            border-right: 3px solid #f00;
+            box-sizing: border-box;
+            display:none;
+            float: right;
+            margin-bottom: 140px;
+            animation-name: focus_resize;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-play-state: paused;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        
+        .scroll_fc_btlf{
+            width: 80px;
+            height: 80px;
+            border-bottom: 3px solid #f00;
+            border-left: 3px solid #f00;
+            box-sizing: border-box;
+            clear: both;
+            float: left;
+            display:none;
+            animation-name: focus_resize;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        
+        .scroll_fc_btrg{
+            width: 80px;
+            height: 80px;
+            border-bottom: 3px solid #f00;
+            border-right: 3px solid #f00;
+            box-sizing: border-box;
+            float: right;
+            display:none;
+            animation-name: focus_resize;
+            animation-timing-function: linear;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-play-state: paused;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+
+
+/*        인디케이트*/
+        .indicate{
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+/*            margin-left:;*/
+            width: 30px;
+            height: 110px;
+            z-index: 10;
+        }
+        
+        .indicate_circle{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        
+        .now{
+            background-color: #f00;
+            border: none;
+        }
+
+
+
+    
+        section{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 500%;
+        }
+        
+        article{
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            box-sizing: border-box;
+            background: #000;
+        }
+
+
+
+/*메인 비디오*/
+
+
+
+
+
+
+        
+        .video_name{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: 35px;
+            margin-left: -250px;
+            display: block;
+            width: 500px;
+            height: 130px;
+            text-indent: -1000%;
+            overflow: hidden;
+            background: url(notthis/main_icon.png) no-repeat;
+            background-size: 500px 130px;
+        }
+
+
+         .video_over{
+            width:100%;height:100%; overflow:hidden; position:absolute;
+             display: flex;
+             align-items: left;
+             justify-content: center;
+             flex-direction: column;
+            }
+
+            .display1 video{position:absolute;
+           left:50%;
+           top:50%;
+           width:auto;
+           min-width:100%;
+           height:auto;
+           min-height:100%;
+          transform:translateX(-50%) translateY(-50%);
+           overflow: hidden;
+            }
+
+
+        .video_title{
+            text-align: center;
+            color: #fff;
+/*            color: rgba(255,255,255,0);*/
+            z-index: 10;
+            font-size: 60px;
+            text-shadow: 0px 0px 3px rgba(0,0,0,1), 0px 0px 3px rgba(0,0,0,1), 0px 0px 3px rgba(0,0,0,1);
+            letter-spacing: 5px;
+        }
+
+        .dp2_background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../image/dp2_banner_leica.jpg) center center no-repeat;
+            background-size: cover;
+        }
+
+        .display2, .display4{
+            display: flex;
+            align-items:left;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .display2 p, .display4 p{
+            left:50%;
+            margin-left: -600px;
+            width: 1200px;
+            position: relative;
+            z-index: 1;
+            display: block;
+            font-size: 20px;
+            color: #fff;
+            letter-spacing: 1px;
+            line-height: 1.2em;
+        }
+
+        .display2 p:nth-of-type(1), .display4 p:nth-of-type(1){
+            font-size: 60px;
+            color: #e1262a;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        .display2 p{
+            text-align: left;
+        }
+
+        .display4 p{
+            text-align: right;
+        }
+
+        .display4 .learn_more{
+            margin-left: 450px;
+        }
+
+        .learn_more{
+            position: relative;
+            top: 10px;
+            left: 50%;
+            margin-left: -600px;
+            display: block;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: #e1262a;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            border: 3px solid #e1262a;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .learn_more:hover{
+            background-color: #e1262a;
+            color: #fff;
+        }
+
+
+        .slide_shortcut{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 270px;
+            background-color: #fff;
+        }
+        
+        .slide_shortcut ul{
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -600px;
+            width: 1200px;
+            height: 200px;
+            
+        }
+        
+        .slide_shortcut li{
+            width: 240px;
+            float: left;
+        }
+        
+        .slide_shortcut a{
+            display: block;
+            padding: 20px 20px;
+        }
+        
+        
+        .slide_shortcut img{
+            width: 200px;
+            text-align: center;
+        }
+        
+        .slide_shortcut .txt{
+            display: block;
+            line-height: 30px;
+            color: #3c3c3c;
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .camera_img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -225px;
+            margin-top: -200px;
+            width: 450px;
+            height: 280px;
+        }
+
+.dp3_background{
+    width: 100%;
+}
+
+
+
+.dp4_mainbn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../image/dp4_background.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+
+.shutter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    z-index: 100;
+    box-shadow: 50%;
+    animation-name: cam_shutter;
+    animation-delay: 2s;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-direction: alternate-reverse;
+}

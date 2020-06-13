@@ -1,0 +1,53 @@
+
+
+.right{
+    float: right;
+}
+
+.left{
+    float: left;
+}
+
+.initial{
+    float: none;
+    clear: both;
+}
+
+.static{
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column
+}
+
+.relative{
+    position: relative;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center
+}
+
+.block{
+    display: block;
+}
+
+.none{
+    display: none;
+}
+
+.auto{
+    width: auto;
+}

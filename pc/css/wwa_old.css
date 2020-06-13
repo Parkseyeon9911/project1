@@ -1,0 +1,131 @@
+
+
+
+section{
+    position: relative;
+    top: 140px;
+    left: 0;
+    width: 100%;
+    height:auto;
+    background-color: #1e1e1e;
+/*    overflow: hidden;*/
+}
+
+
+
+article{
+    padding: 20px;
+    position: relative;
+    margin-top: -100px;
+    left: 50%;
+    width: 1160px;
+    height: auto;
+    margin-left: -600px;
+    background-color: #272727;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/*
+.display1:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #272727;
+    filter: blur(10px);
+    opacity: 0.8;
+}
+*/
+
+.dp1_mainbn{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 300px;
+    background: url(../image/wwa/dp1_mainbn.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.dp1_title{
+    position: relative;
+    z-index: 10;
+    display: block;
+    line-height:320px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0,0,0,1);
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.display1:before{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -125px;
+    display: block;
+    content: "";
+    background: url(../image/wwa/red_circle.png) center center no-repeat;
+    width: 250px;
+    height: 250px;
+    
+}
+
+.ceo_img{
+    width: 800px;
+    height: 500px;
+    float: left;
+}
+
+.ceo_name{
+    margin-top: 464px;
+    margin-left: 20px;
+    width: 340px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+/*    margin-left: 800px;*/
+}
+
+.dp1_content_box{
+    width: 100%;
+    height: auto;
+    border: 3px solid #00f;
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+}
+
+.dp1_content_box li{
+    width: 100%;
+    height: 500px;
+    border: 3px solid #0f0;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+}
+
+/*
+.circle{
+    width: 250px;
+    height: 250px;
+    border: 3px solid #00f;
+    box-sizing: border-box;
+    
+}
+*/
+
+
+/*
+aside{
+    position: relative;
+    top: 140px;
+    left: 50%;
+    width: 400px;
+    margin-left: 200px;
+    height: 1000px;
+    background-color: #00f;
+}*/

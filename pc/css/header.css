@@ -1,0 +1,245 @@
+
+@keyframes blackscreen_move{
+    0%{
+        top: 200%;
+    }
+    
+    50%{
+        top: 50%;
+        transform:scale(1,1)
+    }
+    
+    100%{
+        top: 50%;
+        transform:scale(50,50)
+    }
+}
+
+
+@keyframes blackscreen_rollback{
+    0%{
+        top: 200%;
+    }
+    
+    50%{
+        top: 50%;
+        transform:scale(1,1)
+    }
+    
+    100%{
+        top: 50%;
+        transform:scale(50,50)
+    }
+}
+
+
+
+#headerArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 200;
+}
+
+
+
+.logo a {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    margin-top: -25px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -1000%;
+    overflow: hidden;
+    background: url(../image/logo/header_logo.png) no-repeat;
+    z-index: 100;
+    transition: 1s;
+}
+
+
+.sitemap {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    background: url(../image/icon/sitemap.png) no-repeat;
+    z-index: 100;
+    opacity: 1;
+    transition: 1s;
+}
+
+.closemap {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    opacity: 1;
+    margin-top: -25px;
+    width: 50px;
+    height: 50px;
+    background: url(../image/icon/close.png) no-repeat;
+    z-index: 90;
+    transition: 1s;
+}
+
+.hiddenmap {
+    opacity: 0;
+    display: none;
+}
+
+
+
+
+
+/*네비게이션*/
+
+
+.blackscreen {
+    position: fixed;
+    top: 200%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    background: #e1262a;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    z-index: 100;
+    animation-play-state: paused;
+}
+
+.playani {
+    animation-name: blackscreen_move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+
+.rollbackani {
+    animation-name: blackscreen_rollback;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+    animation-play-state: running;
+}
+
+#gnb {
+    clear: both;
+    width: 80%;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    background-color: #000;
+    z-index: 110;
+}
+
+#gnb .mclose {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url(../image/icon/close.png) no-repeat;
+}
+
+#gnb li {
+    position: relative;
+    top: 0px;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#gnb .sitemap_top {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.nav_logo a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -35px;
+    margin-left: -75px;
+    display: block;
+    width: 150px;
+    height: 70px;
+    text-indent: -1000%;
+    overflow: hidden;
+    background: url(../image/logo/nav_logo.png) no-repeat;
+    z-index: 100;
+    transition: 1s;
+}
+
+
+#gnb li a {
+    display: block;
+    padding: 15px 0;
+    color: #fff;
+}
+
+#gnb li ul {
+    background: #3c3c3c;
+    display: none
+}
+
+.depth1 ul li a {
+    font-size: 15px;
+}
+
+
+
+
+/*미디어쿼리*/
+
+@media screen and (-webkit-device-pixel-ratio: 2) {
+    
+
+.logo a {
+    background: url(../image/logo/header_logo_2x.png) no-repeat;
+    background-size: 50px 50px;
+}
+    
+    
+.sitemap {
+    background: url(../image/icon/sitemap_2x.png) no-repeat;
+    background-size: 50px 50px;
+}
+
+.closemap {
+    background: url(../image/icon/close_2x.png) no-repeat;
+    background-size: 50px 50px;
+}
+    
+    
+    
+#gnb .mclose {
+    background: url(../image/icon/close_2x.png) no-repeat;
+    background-size: 50px 50px;
+}
+    
+    
+    
+    
+.nav_logo a {
+    background: url(../image/logo/nav_logo_2x.png) no-repeat;
+    background-size: 150px 75px;
+} 
+    
+    
+    
+}

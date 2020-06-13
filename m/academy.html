@@ -1,0 +1,396 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<title>LEICA :: Emotional Camera</title>
+
+<link rel="apple-touch-icon-precomposed" href="app_icon.png">
+<link rel="apple-touch-startup-image" href="startup.png">
+
+<!--css-->
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/skipnav.css">
+<link rel="stylesheet" href="css/academy.css">
+
+<!--font-->
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+
+
+
+
+
+<!--script-->
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/header.js"></script>
+<script src="js/academy.js"></script>
+
+<script>
+  // <![CDATA[
+  try {
+   window.addEventListener('load', function(){
+    setTimeout(scrollTo, 0, 0, 1); 
+   }, false);
+  } 
+  catch(e) {}
+  // ]]>
+ </script>
+
+
+
+<style>
+    
+    
+#wrap{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+article{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    
+article:nth-of-type(2), article:nth-of-type(3){
+    height: auto;
+}
+    
+    
+.artist_background{
+    position: relative;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url(image/academy/moveman_background.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+    }
+    
+.artist_bg .move_man{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -160px;
+    width:320px;
+    height: 300px;
+    background: url(image/academy/move_man.png) center no-repeat;
+    background-size: cover;
+    }
+
+/*
+    .dp1_background{
+        position: relative;
+        width: 100%;
+        height: 80%;
+        background:url(image/academy/dp1_mainbanner.jpg) center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+*/
+    
+    .dp1_bg p{
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        width: 90%;
+        text-align: right;
+        font-size: 2em;
+        color: #fff;
+        
+    }
+    
+    .dp1_txtbox{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 20%;
+        margin: 5%;
+        text-align: right;
+        font-size: 1.3em;
+    }
+    
+    .dp2_txtbox{
+        position: relative;
+        top: 0%;
+        left: 0;
+        width: 90%;
+        height: 20%;
+        margin: 5%;
+        text-align: left;
+        font-size: 1.3em;
+    }
+    
+    .dp2_title{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 10%;
+        margin: 10% 5%;
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .academy_box{
+        overflow: hidden;
+        display: block;
+        width: 100%;
+    }
+    
+    .academy_box li{
+        position: relative;
+        display: block;
+        width: 80%;
+        height: auto;
+        margin: 5% 10%;
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.3)
+    }
+    
+    .academy_box li img{
+        width: 100%;
+    }
+    
+    
+    .academy_box dl{
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        font-size: 1.2em;
+    }
+    
+    .academy_box dt{
+        clear: both;
+        float: left;
+        display: block;
+        width: 50%;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .dp3_title{
+        width: 90%;
+        margin-left: 5%;
+        padding-left: 5%;
+        font-size: 2em;
+        color: #e1262a;
+        border-left: 2px solid #e1262a;
+    }
+    
+    .academy_title{
+        margin-top: 5%;
+        width: 100%;
+        height: auto;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2em;
+    }
+    
+    .dp1_bg{
+        position: relative;
+        width: 100%;
+        height: 80%;
+    }
+    
+    .artist_bg{
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+    
+    .clip_bg{
+      clip: rect(0, auto, auto, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .cover_bg{
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;pointer-events: none;
+    }
+    
+    .main_bg{
+      height: 80%;
+      background:url(image/academy/dp1_mainbanner.jpg) center no-repeat;
+      background-size: cover;
+    }
+    
+    .dp2_bg{
+      height: 100%;
+      background:url(image/academy/moveman_background.jpg) center no-repeat;
+      background-size: cover;
+    }
+    
+    
+    
+</style>
+
+
+ <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body>
+<div id="wrap">
+<? include "html/common.html" ?>
+<? include "html/header.html" ?>
+
+<section>
+ <h2 class="hidden">Section Area</h2>    
+<article class="display1" id="content1">
+    <div class="dp1_bg">
+       <div class="clip_bg">
+            <div class="cover_bg main_bg"></div>
+       </div>
+        <p class="bold">Learn Fantastic Photography Skills</p>
+    </div>
+    <p class="dp1_txtbox">The Leica Academy is going to pass on your photographic knowledge to you.
+It tells me how to express myself.</p>
+</article>
+<article class="display2" id="content2">
+   <p class="dp2_title bold">Leica wait for you.</p>
+    <div class="artist_bg">
+       <div class="clip_bg">
+           <div class="cover_bg dp2_bg"></div>
+        </div>
+        <div class="move_man"></div>
+    </div>
+    <p class="dp2_txtbox">Let's follow Leica Artist footsteps and walk together.<br>
+Capture an amazing moment with Laika photographers.</p>
+</article>
+<article>
+   <p class="dp3_title bold">LEICA ACADEMY <br> SCHEDULE</p>
+    <ul class="academy_box">
+        <li>
+           <p class="academy_title">DAWN TO DUSK</p>
+           <img src="image/academy/academy_banner1.jpg" alt="">
+            <dl>
+                <dt>Instructor</dt>
+                <dd>PHIL PENMAN</dd>
+                <dt>Schedule</dt>
+                <dd>AUGUST 7-9</dd>
+                <dt>Place</dt>
+                <dd>Seoul</dd>
+            </dl>
+        </li>
+        <li>
+            <p class="academy_title">STREET PHOTOGRAPHY IN-DEPTH</p>
+           <img src="image/academy/academy_banner2.jpg" alt="">
+            <dl>
+                <dt>Instructor</dt>
+                <dd>DOTAN SAGUY</dd>
+                <dt>Schedule</dt>
+                <dd>OCTOBER 17-24</dd>
+                <dt>Place</dt>
+                <dd>Gyeonggi</dd>
+            </dl>
+        </li>
+        <li>
+            <p class="academy_title">INSIDE THE ARTISTIC PROCESS</p>
+           <img src="image/academy/academy_banner3.jpg" alt="">
+            <dl>
+                <dt>Instructor</dt>
+                <dd>MARK MANN</dd>
+                <dt>Schedule</dt>
+                <dd>JANUARY 22-24</dd>
+                <dt>Place</dt>
+                <dd>Busan</dd>
+            </dl>
+        </li>
+    </ul>
+</article>
+<? include "html/footer.html" ?>
+</section>
+
+</div>
+   
+    
+</body>
+
+<script>
+$(document).ready(function() {
+    $('.academy_box li').addClass('objscale_ani')
+    $('#wrap').scroll(function(e){
+    var now_scroll = $(this).scrollTop();
+//        console.log(now_scroll)
+        $('.academy_box li').each(function(i,ee){
+//         console.log(i)
+            if(now_scroll >  $('.academy_box li').eq(i).offset().top+$('.academy_box li').eq(i).outerHeight()){
+            $('.academy_box li').eq(i).css({
+                animationPlayState:'running'
+            })
+            }
+            else{
+                
+            }
+        })
+//            
+//            if(now_scroll >  $('article').eq(i).offset().top+$('article').eq(i).height()){
+//            
+//            $('article').eq(i).children().css({
+//                animationPlayState:'running'
+//            })
+//                
+//            if($('.short_cut_box').css('animation-play-state') == 'running'){
+//                
+//                
+//                setTimeout(function(){
+//                $('.short_cut_box').children().css({
+//                animationPlayState:'running'
+//                })
+//                $('.short_cut_box ul').children().css({
+//                animationPlayState:'running'
+//                })
+//               },500)
+//}
+//        }})
+})
+})
+    
+</script>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,74 @@
+<?
+	session_start();
+    @extract($_GET); 
+    @extract($_POST); 
+    @extract($_SESSION);  
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leica :: Emotional Camera</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+
+   
+   
+   <!--    폰트-->
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="common/css/common.css">
+<link rel="stylesheet" href="common/css/header.css">
+<link rel="stylesheet" href="common/css/footer.css">
+<link rel="stylesheet" href="common/css/skipnav.css">
+<link rel="stylesheet" href="common/css/login.css">
+
+<script src="common/js/common.js"></script>
+</head>
+
+
+<body>
+    <? include "common/common.html" ?>
+    <? include "common/header.html" ?>
+    
+     <section>
+<!--        아티클-->
+        <article class="display1" id="content1">
+            <form name="member_form" method="post" action="login/login.php" class="dp1_left_area">
+<!--              아이디 입력-->
+               <div class="dp1_left_tp"></div>
+               <fieldset>
+               <label for="pi_id">E-mail</label>
+               <input type="text" id="pi_id" name="id">
+               </fieldset>
+               
+<!--               비밀번호 입력-->
+             <fieldset>
+               <input type="password" id="pi_pw" name="pass">
+               <label for="pi_pw">PassWord</label>
+               </fieldset>
+<!--               아이디/비밀번호 저장-->
+               <fieldset>
+                   <input type="checkbox" id="save_agr" name="save_agr">
+                   <label for="save_agr">I agree to save E-mail and password.</label>
+               </fieldset>
+               
+<!--               로그인 버튼-->
+               <fieldset>
+                   
+                   <input type="submit" value="Log-In">
+               </fieldset>
+               
+            </form>
+            <div class="dp1_right_area">
+            </div>
+           </article>
+    </section>
+    
+    
+
+</body>
+</html>

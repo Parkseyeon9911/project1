@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>&#60;&#47;박세연&#62;</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="js/typer.js"></script>
+<script>
+    
+    window.onload=function(){	
+        
+        
+                    setTimeout(function(){
+                        $('.noise').css({
+                            display:'none'
+                        })
+                        
+                        
+                        $('.logo').css({
+                            display:'none'
+                        })
+                        
+                        $('.black_screen').css({
+                               display:'block'
+                           })
+                    },2000)
+        
+                    setTimeout(function(){
+                           $('.booting').css({
+                               animationPlayState:'running'
+                           })
+                    },2100)
+        
+                    setTimeout(function(){
+                            $('.black_screen').css({
+                               display:'none'
+                           })
+                    },2600)
+                    
+        
+                    setTimeout(function(){
+						var el       = document.querySelector('.main-text')
+						var options  = {
+							text: '<PORTFOLIO>',
+					  textSpeed: 200,
+					  blinkSpeed: 0.06
+						}
+
+						var instance = new tinytyper(el, options);
+                    },3000)
+        
+						
+					}
+    
+    $(document).ready(function(){
+       
+    var curr = 0
+    var moving = true
+    var pg = $('section').children("article")
+    var pg_nm = parseInt(pg.length)-1
+    
+    
+    $('.indicate a').on("click",function(e){
+        console.log('동작')
+        e.preventDefault();
+        var indi_num = $('.indicate a').index($(this))+1
+            
+        sectionScr(indi_num)
+    })
+    
+    
+        
+    $('html,body').on('mousewheel',function(e){
+        
+        
+        if(curr == 6){
+            moving = false
+            if(e.originalEvent.wheelDelta > 0 && $('#content7').scrollTop() == 0){
+            moving = true
+            delta = -1
+            
+        sectionScr(delta+curr)
+           }
+            
+            else if(e.originalEvent.wheelDelta < 0 && $('#content7').scrollTop() + $(window).height() >= $('.gallery_box').height()){
+            moving = true
+            delta = 1
+                
+            sectionScr(delta+curr)
+            }
+        
+        }
+        
+        
+        
+        
+        
+        
+        if(moving){
+            
+          var delta = 0
+        
+        if(e.originalEvent.wheelDelta < 0){
+            
+           delta = 1
+            
+           }
+            
+        else if(e.originalEvent.wheelDelta >0){
+            
+            delta = -1
+            
+        }
+            
+//        console.log($('article').height())
+//        console.log($('.gallery_box').height())
+        sectionScr(delta+curr)
+        }
+    })
+        
+        
+        
+        
+        function sectionScr(delta){
+        
+        moving = false
+        
+        curr = delta
+        
+        if(curr < 0){
+            curr = 0
+        }
+        
+        if(curr > pg_nm){
+            curr = pg_nm
+        }
+        
+        var tt = -curr*100+"%"
+        
+                    
+            
+//        if(curr == 6){
+//            moving = false
+//            tt = '600%';
+//        }
+        
+        $('section').stop().animate({
+            left: tt
+        },
+        1000,function(){
+            moving = true
+        })
+        
+//            console.log($('section').css('left'))
+//            console.log(curr)/**/
+
+            
+            
+        if(curr == 7){
+//            console.log('동작')\
+            var el       = document.querySelector('.end-text')
+						var options  = {
+							text: '</PORTFOLIO>',
+					  textSpeed: 200,
+					  blinkSpeed: 0.06
+						}
+
+						var instance = new tinytyper(el, options);
+        }    
+//            
+            
+            
+        
+        $('.indicate > a').eq(curr).addClass('now')
+        $('.indicate > a').not($(".indicate > .indicate_circle").eq(curr)).removeClass('now')
+            
+            
+    }
+        
+        
+        
+        $('.design').on('click',function(){
+            $('.black_screen').css({
+                display:'block'
+            })
+        })
+        
+        
+        
+    
+    
+     
+    })
+    
+</script>
+</head>
+<body>
+    <section>
+    <h2 class="hidden">박세연의 포트폴리오</h2>
+    <div class="black_screen">
+            <div class="booting"></div>
+    </div>
+    
+    <div class="modal_black"></div>
+<!--       개인 프로필-->
+        <article class="display1" id="content1">
+            <h3 class="hidden">메인</h3>
+            <div class="noise"></div>
+            <div class="logo"></div>
+            <p class="title_end main-text"></p>
+            <p class="scroll_down">SCROLL DOWN</p>
+        </article>
+        
+<!--        개인 프로필2-->
+        <article class="display2" id="content2">
+            <h3 class="hidden">프로필</h3>
+           <p class="title">&#60;&#47;PROFILE&#62;</p>
+            <div class="profile_wrapper">
+                <dl>
+                    <dt class="name">박세연</dt>
+                    <dd>PPAXE : PARK SE YEON</dd>
+                    <dt>TEL</dt>
+                    <dd>010-9911-1230</dd>
+                    <dt>E-MAIL</dt>
+                    <dd>dudal5305@naver.com / parksy111230@gmail.com</dd>
+                    <dt>TOOLS</dt>
+                    <dd>HTML5,CSS3,JAVA Script,Word Press,jQuery,PHP,<br>PHOTOSHOP,ILLUSTRATOR,RHINO,KEYSHOT,CLIPSTUDIO</dd>
+                </dl>
+            </div>
+           <div class="photo_profile">
+           </div>
+<!--https://github.com/Parkseyeon9911/project1-->
+            <div class="bt_box">
+            <a href="#" onclick="window.open('https://github.com/Parkseyeon9911/project1')" target="_blank" class="view_bt">GITHUB</a>
+           <a href="#" onclick="window.open('http://emotionalelec.dothome.co.kr/portfolio_ppaxe.pdf')" target="_blank" class="view_bt">
+            STORY BOARD</a>
+            </div>
+        </article>
+        
+<!--        PC-->
+        <article class="display3" id="content3">
+            <h3 class="hidden">기업형</h3>
+           <p class="title">&#60;&#47;COPERATION&#62;</p>
+            <img src="images/imac.png" alt="" class="mockup_pc">
+            <img src="images/pc.gif" alt="" class="movement_pc">
+            <div class="bt_box">
+<!--            <button class="view_bt design">DESIGN</button>-->
+           <a href="#" onclick="window.open('http://leicacam.cafe24.com/pc/')
+           " target="_blank" class="view_bt">VIEW</a>
+            </div>
+        </article>
+        
+<!--        모바일-->
+        <article class="display4" id="content4">
+            <h3 class="hidden">모바일</h3>
+           <p class="title">&#60;&#47;MOBILE&#62;</p>
+            <img src="images/mobile_background.jpg" alt="" class="mobile_background">
+            <img src="images/iphone.png" alt="" class="mockup_pc">
+            <img src="images/mobile.gif" alt="" class="movement_mobile">
+            <a href="http://leicacam.cafe24.com/m/" target="_blank" title="PC_shortcut"></a>
+            <div class="bt_box">
+<!--            <button class="view_bt design">DESIGN</button>-->
+           <a href="#" onclick="window.open('http://leicacam.cafe24.com/m/'
+           ,'leicacam_mobile','width=480,height=640')" target="_blank" class="view_bt">VIEW</a>
+            </div>
+        </article>
+        
+<!--        반응형-->
+        <article class="display5" id="content5">
+            <h3 class="hidden">반응형</h3>
+           <p class="title">&#60;&#47;RESPONSIVE&#62;</p>
+<!--           <a href="#" target="_blank" title=""><button>LEARN MORE</button></a>-->
+            <img src="images/res_all.png" alt="" class="mockup_pc">
+            <img src="images/res.gif" alt="" class="movement_res">
+            <div class="bt_box">
+<!--            <button class="view_bt design">DESIGN</button>-->
+           <a href="#" onclick="window.open('http://leicacam.cafe24.com/responsive/')
+           " target="_blank" class="view_bt">VIEW</a>
+            </div>
+        </article>
+        
+<!--        워드프레스-->
+        <article class="display6" id="content6">
+            <h3 class="hidden">워드프레스</h3>
+           <p class="title">&#60;&#47;WORD_PRESS&#62;</p>
+<!--           <a href="#" target="_blank" title=""><button>LEARN MORE</button></a>-->
+            <img src="images/wp_background.jpg" alt="" class="wp_background">
+            <img src="images/imac.png" alt="" class="mockup_pc">
+            <img src="images/wp.gif" alt="" class="movement_pc">
+            <div class="bt_box">
+<!--            <button class="view_bt design">DESIGN</button>-->
+           <a href="#" onclick="window.open('http://leicacam.cafe24.com/wp/')
+           " target="_blank" class="view_bt">VIEW</a>
+            </div>
+        </article>
+        
+        <article class="display7" id="content7">
+            <h3 class="hidden">기타 작업물</h3>
+           <p class="title">&#60;&#47;ARTWORK&#62;</p>
+            <div class="gallery_box">
+                <div class="img_box">
+                    <img src="gallery/poster.jpg" alt="">
+                </div>
+                <div class="img_box">
+                    <img src="gallery/poster2.jpg" alt=""></div>
+                <div class="img_box">
+                    <img src="gallery/poster3.jpg" alt=""></div>
+                <div class="img_box">
+                    <img src="gallery/poster4.jpg" alt=""></div>
+                <div class="img_box">
+                    <img src="gallery/poster5.jpg" alt=""></div>
+                <div class="img_box">
+                    <img src="gallery/product1.jpg" alt=""></div>
+                <div class="img_box">
+                    <img src="gallery/product2.jpg" alt="">
+                </div>
+                <div class="img_box"><img src="gallery/product3.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/product4.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo1.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo2.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo3.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo4.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo5.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo6.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo7.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo8.jpg" alt=""></div>
+                <div class="img_box"><img src="gallery/logo9.jpg" alt=""></div>
+            </div>
+        </article>
+        <article class="display8" id="content8">
+            <h3 class="hidden">마지막 페이지</h3>
+                       <p class="title_end end-text"></p>
+        </article>
+    </section>
+</body>
+</html>

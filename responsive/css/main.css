@@ -1,0 +1,921 @@
+    #wrap{
+        position: relative;
+        top: 0;
+        left:0px;
+        clear: both;
+        float: none;
+        display: block;
+        margin-left: 70px;
+        width: auto;
+        height: 100%;
+        color: #aafff0;
+        text-shadow: 0px 0px 10px #aafff0;
+    }
+
+
+    section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    article{
+        position: relative;
+        width: 100%;
+        height: 100%;
+/*        background-color: #1e2225;*/
+        background:url(../images/pg_loading_background2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+
+.down{display: block; font-size: 20px; position: absolute; 
+	 left:50%; margin-left: -90px; bottom: 20%;
+	animation:ani 1s infinite  alternate;}
+/*
+@keyframes ani {
+	0% { transform:scale(1); opacity:1; color:#fff;}
+	100% { transform:scale(1.2); opacity:0.8; color:#888;}
+}	
+*/
+
+
+
+ .video_over{
+        width:100%;height:100%; overflow:hidden; position:absolute;
+     display: flex;
+     align-items: center;
+     text-align: center;
+    }
+    
+    .display1 video{position:absolute;
+   left:50%;
+   top:50%;
+   width:auto;
+   min-width:100%;
+   height:auto;
+   min-height:100%;
+  transform:translateX(-50%) translateY(-50%);
+   overflow: hidden;
+    }
+    
+    
+
+
+    .vdimg_background{
+        position:absolute; 
+       left:50%;
+       top:50%; 
+       width:auto;
+       min-width:100%; 
+       height:auto;
+       min-height:100%; 
+       transform:translateX(-50%) translateY(-50%);
+       z-index:1;
+       display:none;
+       background: url(../images/video_background.jpg) center center no-repeat;
+       background-size: cover;
+    }
+
+
+    .display1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .dp1_title{
+        position: fixed;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 3em;
+        z-index: 10;
+        color: #fff;
+        text-shadow: 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1);
+        text-shadow: none;
+        transition: 0.5s;
+        letter-spacing: 0.1em;
+    }
+
+
+
+    .resize_title{
+        position: absolute;
+        width: 100%;
+        display: block;
+        font-size: 2.5em;
+        color: #fff;
+        text-shadow: 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1);
+        z-index: 10;
+        text-align: center;
+        text-shadow: none;
+    }
+
+
+    .galaxy_circle{
+        position: relative;
+/*
+        top: 50%;
+        left: 50%;
+*/
+        width:100%;
+        padding-top: 100%;
+        background: url(../images/dp1_circle_small_wide.png) no-repeat;
+        background-size: 100% 100%;
+        z-index: 5;
+        animation-name: galaxy_mv;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        transform: rotate(0deg) ;
+        animation-timing-function: linear;
+    }
+
+
+    .galaxy_circle_background{
+        position:absolute; 
+        width:100%;
+        padding-top: 100%;
+        
+        background: url(../images/dp1_circle_big_wide.png) no-repeat;
+        background-size: cover;
+        z-index: 5;
+    }
+
+/*
+    .galaxy_circle_background{
+        position:absolute; 
+       left:50%;
+       top:50%; 
+        width:100%;
+        padding-top: 100%;
+       z-index: 4;
+       transform:translateX(-50%) translateY(-50%);
+        background: url(../images/dp1_circle_big_wide.png) no-repeat;
+        background-size: 100% 100%;
+    }
+*/
+    
+
+@keyframes galaxy_mv{
+    0%{
+        transform: rotate(0deg) 
+    }
+    
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+
+    .space_ship_fix{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/main_spaceship.png) center center no-repeat;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .dp1_background{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/dp1_background2.jpg) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .dp2_title{
+        position: relative;
+        top: 30%;
+        left: 0;
+        width: 100%;
+        display: block;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+        letter-spacing: .5em;
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    
+    .title{
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: 3em;
+        letter-spacing: .25em;
+        width: 100%;
+        margin: 10% auto;
+        display: block;
+        text-align: center;
+        
+    }
+    .dp2_subj{
+        position: relative;
+        top: 30%;
+        left: 30%;
+        width: 40%;
+        text-align: center;
+        display: block;
+        font-size: 1.3em;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+    }
+    
+    .dp2_background{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20%;
+        height: 100%;
+        background: url(../images/dp2_background.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .display3{
+        height: auto;
+    }
+    
+    .dp3_layout_box{
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+    }
+    
+    .dp3_lf_depth{
+        width: 50%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+    }
+    
+    
+    .dp3_rg_depth{
+        margin-top: 9%;
+        width: 50%;
+        height: 100%;
+        float: left;
+        overflow: hidden;
+    }
+    
+    .dp3_lf_depth li{
+        float: right;
+        display: block;
+        margin: 1% 0;
+    }
+    
+    .dp3_rg_depth li{
+        display: block;
+        margin: 2%;
+    }
+    
+    .vertical_layout{
+        width: 40%;
+        padding-top: 60%;
+    }
+    
+    .horizontal_layout{
+        width: 80%;
+        padding-top: 40%;
+    }
+    
+    
+    .dp3_lf_depth li:nth-of-type(1){
+        background:url(../images/dp3_layout1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(1):before{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(3):before{
+        position: absolute;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(2):before{
+        position: absolute;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        margin-left: 3%;
+        content:"This week in 2010, space shuttle Discovery, mission STS-131, launched from NASA’s Kennedy Space Center on the 33rd shuttle mission to the International Space Station.";
+        display: block;
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 2em;
+        text-align: right;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(2){
+        background:url(../images/dp3_layout2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(3){
+        background:url(../images/dp3_layout3.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(1){
+        background:url(../images/dp3_layout4.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(2){
+        background:url(../images/dp3_layout5.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(3){
+        background:url(../images/dp3_layout6.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+
+
+    
+    .dp4_title{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        font-size: 3em;
+        z-index: 10;
+        color: #fff;
+        text-shadow: 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1), 0px 0px 2px rgba(0,0,0,1);
+        margin-top: -2em;
+        text-align: center;
+        z-index: 20;
+    }
+    
+    
+    .dp5_layout_box{
+        width: 80%;
+        height: auto;
+        display: block;
+        width: auto 10%;
+        height: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        background-color: none;
+    }
+    
+    
+    
+    
+    .display5{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+/*        background: url(../images/footer_background.png) center bottom no-repeat;*/
+        background:url(../images/pg_loading_background2.jpg) center center no-repeat;
+        background-size: cover;
+        background-color: #1e2225;
+    }
+    
+    
+
+.dp5_background{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background:url(../images/footer_background.png) center bottom no-repeat;
+    background-size: contain;
+}
+    .dp5_li_depth1{
+        position: relative;
+        width: 24.5%;
+        height: 500px;
+        float: left;
+        display: block;
+        display: flex;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1){
+        align-items: flex-start;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(2){
+        background: url(../images/dp5_layout3.jpg) center center no-repeat;
+        background-size: cover;
+        overflow: none;
+    }
+    
+    .dp5_li_depth1:nth-of-type(3){
+        background: url(../images/dp5_layout4.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(4){
+        align-items: flex-end;
+    }
+    
+    
+    
+    
+    
+    
+    .dp5_li_depth1 ul{
+        overflow: hidden;
+        width: 100%;
+        display: block;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li{
+        width: 100%;
+        height: 150px;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(1):after{
+        content: "NASA's Story is a documentary series by Dangerous Films for the BBC to commemorate 50 years since the formation of NASA.";
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+        font-size: 1em;
+        clear: both;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(4):before{
+        content: "NASA's Story is a documentary series by Dangerous Films for the BBC to commemorate 50 years since the formation of NASA.";
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+        font-size: 1em;
+        clear: both;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li:nth-of-type(1){
+        background: url(../images/dp5_layout1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1) li:nth-of-type(2){
+        background: url(../images/dp5_layout2.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li{
+        width: 100%;
+        height: 150px;
+    }
+
+    .dp5_li_depth1:nth-of-type(4) li:nth-of-type(1){
+        background: url(../images/dp5_layout5.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li:nth-of-type(2){
+        background: url(../images/dp5_layout6.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .dp5_moveman{
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:url(../images/dp5_spaceman.png) center center no-repeat;
+        background-size: contain;
+    }
+    
+    .dp5_manover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+#content{ width:94%; margin:0 3%; }
+	
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+#content{ width:auto; margin:0; }
+    
+    #wrap{
+        margin-left: 0px;
+    }
+    
+    
+    
+    .dp1_title{
+        height: 0;
+        display:none;
+    }
+    
+    
+        .dp2_background{
+        position: relative;
+        width:50%;
+        float: right;
+    }
+    
+    
+        .dp2_title{
+        position: relative;
+        top: 30%;
+        left: 0;
+        width: 44%;
+        display: block;
+        color: #aafff0;
+        text-shadow: 0px 0px 10px #aafff0;
+        font-size: 2.5em;
+        text-align: center;
+        margin: 0 3%;
+        letter-spacing:0.05em;
+    }
+    
+    
+        .dp2_subj{
+        position: relative;
+        top: 30%;
+        left: 0;
+        width: 44%;
+        text-align: center;
+        display: block;
+        font-size: 1.3em;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+        margin: 0 3%;
+    }
+    
+    
+    .title{
+        font-size: 2.5em;
+    }
+    
+    .vertical_layout{
+        width: 50%;
+        padding-top: 60%;
+    }
+    
+    .horizontal_layout{
+        width: auto;
+        padding-top: 40%;
+    }
+    
+        .dp3_lf_depth{
+        width: 94%;
+        height: auto;
+        float: none;
+        clear: both;
+        overflow: hidden;
+        margin: 0 3%;
+    }
+    
+    
+        .dp3_lf_depth li{
+        float: none;
+        clear: both;
+        display: block;
+        margin: 1% 0;
+    }
+    
+    
+        .dp3_lf_depth li:nth-of-type(1):before{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 97%;
+            margin-left: 3%;
+        font-size: 1.2em;
+    }
+    
+        .dp3_lf_depth li:nth-of-type(3){
+            float: right;
+    }
+        .dp3_lf_depth li:nth-of-type(3):before{
+        width: 100%;
+        font-size: 1.2em;
+    }
+    
+    
+        .dp3_rg_depth{
+        margin-top: 0;
+        width: 94%;
+        margin: 0% 3%;
+        height: auto;
+        float: left;
+        overflow: hidden;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+    }
+    
+    
+        .dp3_rg_depth li{
+        margin: 1% 0;
+    }
+    
+        .dp3_rg_depth li:nth-of-type(2):before{
+        width: 94%;
+        margin: 0 3%;
+        float: right;
+        font-size: 1.2em;
+    }
+    
+    
+    .dp4_title{
+        letter-spacing: 0.25em;
+    }
+    
+    .display5{
+        height: auto;
+        display: block;
+        align-items: none;
+        justify-content: none;
+    }
+    
+    .dp5_layout_box{
+        width: 94%;
+        height: auto;
+        margin: 0 3%;
+        overflow: hidden;
+        display: block;
+        justify-content: none;
+        flex-direction: none;
+        background-color: none;
+    }
+    
+    .dp5_li_depth1{
+        width: auto;
+        height: auto;
+        float: none;
+        clear: both;
+        display: block;
+        margin: 1% auto;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(1) li{
+        width: 49%;
+        height: 300px;
+        float: left;
+    }
+    
+    .dp5_li_depth1 ul{
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .dp5_li_depth1:nth-of-type(1):after{
+        margin: 10% auto;
+        text-align: center;
+        font-size: 1.5em;
+        position: relative;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(4):before{
+        margin: 10% auto;
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(2){
+        height: 300px;
+    }
+    
+    .dp5_li_depth1:nth-of-type(3){
+        height: 300px;
+    }
+    
+    .dp5_manover{
+        top: -50%;
+        width: 100%;
+        height: 150%;
+    }
+    
+    .dp5_moveman{
+        position: absolute;
+        padding-top: 10%;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li{
+        width: 49%;
+        height: 300px;
+        float: left;
+    }
+}
+
+/* 소형 테블릿 */
+/*
+@media screen and (max-width:768px) {
+}
+*/
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+    
+    
+    .dp2_title,.dp2_subj,.title,.dp3_lf_depth li:before, .dp3_lf_depth li:before, .dp5_lf_depth1 li:after, .dp5_lf_depth1 li:before, .dp5_li_depth1:nth-of-type(1):after, .dp5_li_depth1:nth-of-type(4):before{
+        color: #fff;
+    }
+    
+    
+    
+    .dp2_background{
+        float: none;
+        clear: both;
+        width:auto;
+        padding-top: 54%;
+        margin: 0% 3%;
+    }
+    
+    
+    .dp2_title{
+        top: 0;
+        width: auto;
+        margin: 0 3%;
+        font-size: 1.8em;
+        letter-spacing: 0px;
+    }
+    
+    .title{
+        font-size: 1.8em;
+        letter-spacing: 0px;
+    }
+    
+    .dp2_subj{
+        top: 0;
+        width: auto;
+        margin: 0 3%;
+    }
+    
+    
+    .display2{
+        height: auto;
+    }
+        
+    .vertical_layout{
+        padding-top: 0;
+        display: none;
+    }
+    
+    .horizontal_layout{
+        width: auto;
+        padding-top: 40%;
+    }
+    
+    
+    .dp3_lf_depth li:nth-of-type(1):before{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 200%;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .dp3_lf_depth li:nth-of-type(3):before{
+        position: relative;
+        left: 0;
+        width: 200%;
+        margin: 0;
+        text-align: center;
+    }
+    
+    
+    .dp3_lf_depth li:nth-of-type(3){
+        float: none;
+        clear: both;
+    }
+    
+    .dp3_rg_depth{
+        padding-bottom: 10%;
+    }
+    
+    
+    .dp3_rg_depth li:nth-of-type(2){
+        float: none;
+        clear: both;
+        background:none;
+    }
+    
+    .dp3_rg_depth li:nth-of-type(2):before{
+        clear: both;
+        float: none;
+        position: relative;
+        display: block;
+        left: 0;
+        width: 200%;
+        text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+        margin: 0;
+    }
+    
+    
+    .display4{
+        height: auto;
+    }
+    
+    .dp1_background{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 94%;
+        margin: 0 3%;
+        height: 400px;    
+        background: url(../images/dp1_background2.jpg) center center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .dp4_title{
+        position: relative;
+        top: 0;
+        width: 94%;
+        height: auto;
+        margin: 0 3%;
+        color: #fff;
+        text-shadow:none;
+        line-height: 1em;
+        margin: 0 auto;
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 20;
+        letter-spacing: 2px;
+        margin-bottom: 10%;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(2){
+        height: 200px;
+    }
+    
+    .dp5_li_depth1:nth-of-type(3){
+        height: 200px;
+    }
+    
+    
+    .dp5_li_depth1:nth-of-type(1) li{
+        display: none;
+    }
+    
+    .dp5_li_depth1:nth-of-type(4) li{
+            display: none;
+    }
+}
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+	#wrap { min-width:320px; }
+}
+

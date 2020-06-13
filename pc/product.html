@@ -1,0 +1,160 @@
+
+<!--다음은 클래스는 _, 아이디는 대문자로 구분-->
+<!--https://nykim.work/30-->
+<!--https://ideveloper2.tistory.com/150-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>LEICA :: EMOTIONAL CAMERA</title>
+    <link rel="shortcut icon" type="image/x-icon"  href="favicon.ico">
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+
+   <!--    폰트-->
+    
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common/css/common.css">
+<link rel="stylesheet" href="common/css/header.css">
+<link rel="stylesheet" href="common/css/footer.css">
+<link rel="stylesheet" href="common/css/skipnav.css">
+<script src="common/js/common.js"></script>
+
+<link rel="stylesheet" href="css/product.css">
+<script src="js/product.js"></script>
+</head>
+<body>
+<? include "common/common.html" ?>
+<? include "common/header.html" ?>
+<!--    섹션-->
+        <div class="buy_nav">
+           <div class="slide_box">
+                <ul class="slides">
+                    <li>
+                        <img src="image/product/m10/slide_img1_2x.png" alt="">
+                    </li>
+                    <li>
+                        <img src="image/product/m10/slide_img2_2x.png" alt=""></li>
+                    <li>
+                        <img src="image/product/m10/slide_img3_2x.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            <div class="indicate">
+
+            </div>
+            <div class="product_info_box">
+                <p class="buy_title bold">LEICA M10</p>
+                <p class="buy_subj">Closer to the decisive moment</p>
+                <p class="buy_price bold">10,700,000 W</p>
+            </div>
+            <div class="blocking"></div>
+            <button class="buy_bt">Buy Now</button>
+        </div>
+    <section>
+<!--        아티클 1 / 기업 비디오 -->
+<!--        메인 비디오-->
+       
+        <article id="content1" class="display1">
+           <div class="dp1_info_box">
+            <p class="dp1_title bold">DISCOVER MORE IN BLACK & WHITE</p>
+            <p class="dp1_subj">The Leica M10 Monochrom with 40MP</p>
+            </div>
+        </article>
+        <article id="content2" class="display2">
+            <div class="info_box">
+                <p class="info_title bold">Why LEICA M-SYSTEM?</p>
+                <p class="info_subj">When you take a photograph with a Leica M-System camera, 
+                <br>you experience a different kind of photography.</p>
+            </div>
+        </article>
+        <article id="content3" class="display3">
+          <iframe src="https://player.vimeo.com/video/368004670?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" style="position:relative; float: right; display: block; margin: 20px 0px" allowfullscreen></iframe>
+            <p class="sub_title bold">A UNIQUE APPROACH TO PHOTOGRAPHY</p>
+           <div class="size_wrap">
+                <img src="image/product/m10/dp2_subimg.png" alt="">
+           </div>
+        </article>
+    </section>
+    
+<!--    푸터-->
+<!--<? include "common/footer.html" ?>-->
+
+</body>
+<script>
+    
+    
+    
+$(document).ready(function(){
+     
+    var curr = 0
+    var moving = true
+    
+    var pg = $('.buy_nav .slides').children("li")
+    
+    var pg_nm = parseInt(pg.length)-1
+    
+    
+    for(var i = 0; i<= pg_nm; i++){
+        var indicate_circle = $('<div>')
+        indicate_circle.addClass('indicate_circle')
+        
+        var main_img = $('.slides li').eq(i).find('img').attr('src')
+//        console.log(main_img)
+        var indicate_img = $('<img>')
+        indicate_img.attr('src',main_img)
+        indicate_circle.append(indicate_img)
+        $('.indicate').append(indicate_circle)
+    }
+    $('.indicate > .indicate_circle:nth-of-type(1)').addClass('now')
+    
+    
+    
+     
+     $('.indicate > .indicate_circle').on("click",function(){
+        
+        var cir_num = $('.indicate > .indicate_circle').index($(this))
+            
+        slideMove(cir_num)
+    })
+    
+    
+    
+     function slideMove(delta){
+        
+        moving = false
+        
+        curr = delta
+        
+        if(curr < 0){
+            curr = 0
+        }
+        
+        if(curr >= pg_nm){
+            curr = pg_nm
+        }
+        
+        var tt = -curr*100+"%"
+        
+        
+        
+        $('.slide_box .slides').stop().animate({
+            left: tt
+        },
+        500,function(){
+            moving = true
+        }
+        )
+         
+         
+        $('.indicate > .indicate_circle').eq(curr).addClass('now')
+        $('.indicate > .indicate_circle').not($(".indicate > .indicate_circle").eq(curr)).removeClass('now')
+         
+    }
+})
+    
+    
+</script>
+</html>

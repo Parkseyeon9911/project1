@@ -1,0 +1,421 @@
+
+        #wrap{
+        position: relative;
+        top: 0;
+        left:0px;
+        clear: both;
+        float: none;
+        display: block;
+        margin-left: 70px;
+        width: auto;
+        height: 100%;
+    }
+
+
+    section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    article{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #1e2225;
+    }
+    
+    .display1{
+        background: url(../images/mission_dp1_background.jpg) center center no-repeat;
+        background-size: cover;
+    }
+/*아티클1*/
+/* 메인 슬라이드*/
+
+    
+    .video_box{
+        position: fixed;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        transform: scale(1,1);
+        z-index: 110;
+        display: none;
+    }
+    
+    .video_closebt{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        width: 3%;
+        padding-top: 3%;
+        z-index: 120;
+        display: none;
+        background: url(../images/video_closebt.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px; height: 0; overflow: hidden;
+    }
+    .video_container iframe,
+    .video_container object,
+    .video_container embed {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%) translateY(-50%);
+        display: none;
+    }
+
+    
+/*
+    .black_screen{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        transform: scale(1,1);
+        z-index: 100;
+        display: none;
+    }
+*/
+
+.slide_box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.slides a{
+    position: relative;
+    width: 15%;
+    height: 80%;
+    margin: 1%;
+    float: left;
+    display: block;
+    transform-origin: 50% 50%;
+    transform:scale(1,1);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.slides li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+    
+    
+.slides a:nth-of-type(1) li{
+    background: url(../images/mission_slide_1.jpg) center center no-repeat;
+    background-size: cover;
+}
+    
+.slides a:nth-of-type(2) li{
+    background: url(../images/mission_slide_2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.slides a:nth-of-type(3) li{
+    background: url(../images/mission_slide_3.jpg) center center no-repeat;
+    background-size: cover;
+}
+    
+.slides a:nth-of-type(4) li{
+    background: url(../images/mission_slide_4.jpg) center center no-repeat;
+    background-size: cover;
+}
+    
+.slides a:nth-of-type(5) li{
+    background: url(../images/mission_slide_5.jpg) center center no-repeat;
+    background-size: cover;
+}
+    
+.slides img {
+    margin: 0 auto;
+}
+
+.dp1_title{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: .5em;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+}
+    
+.dp1_subj{
+    position: relative;
+    top: 0;
+    left: 5%;
+    height: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 0.25em;
+    color: #aafff0;
+    text-shadow: 0px 0px 10px #aafff0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+
+
+.dp1_background {
+    width: 100%;
+    height: 100%;
+    background: url(../image/main/dp1_background1_2x.jpg) center center no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*메인슬라이드 인디케이트*/
+
+    
+.indicate_box{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+    
+.indicate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+}
+
+.indicate_circle {
+    z-index: 2;
+    position: relative;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border: 2px solid #aafff0;
+    box-shadow: 0px 0px 10px #aafff0;
+    background-color: #1e2225;
+    box-sizing: border-box;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.now {
+    background-color: #aafff0;
+    border: none;
+    box-shadow: 0px 0px 10px #aafff0;
+}
+    
+.indicate_line{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #aafff0;
+    box-shadow: 0px 0px 10px #aafff0;
+    display: block;
+}
+    
+    
+    .popup_pbox{
+        display: none;
+    }
+    
+    .play_bt{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background:url(../images/play_bt.png) center center no-repeat;
+        background-size: cover;
+        transition: 0.5s;
+        transform-origin: 50% 50%;
+        transform: scale(1,1);
+        z-index: 100;
+    }
+    
+
+    .bt_outline{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid  #aafff0;
+    transform-origin: 50% 50%;
+    animation: loading 3s linear infinite;
+    z-index: 90;
+    display: none;
+}
+    
+    
+.bt_outline:before{
+    content: "";
+    position: absolute;
+    bottom:-7.5px;
+    left: calc(50% - 7.5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 7.5px;
+    background-color: #aafff0;
+}
+
+.bt_outline:after{
+    content: "";
+    position: absolute;
+    top: -7.5px;
+    left: calc(50% - 7.5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 7.5px;
+    background-color: #aafff0;
+}
+
+    
+@media screen and (max-width:1024px) {
+#content{ width:auto; margin:0; }
+    
+    #wrap{
+        margin-left: 0px;
+        overflow-y: hidden;
+    }
+    }
+@media screen and (max-width:768px) {
+    .video_closebt{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        width: 10%;
+        padding-top: 10%;
+        z-index: 120;
+        background: url(../images/video_closebt.png) center center no-repeat;
+        background-size: cover;
+    }
+    
+    .slide_box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+    
+.slides a{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    float: none;
+    clear: both;
+    margin: 0;
+    transform:scale(1,1);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.slides li{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: none;
+    clear: both;
+}
+
+    .play_bt{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .bt_outline{
+        width: 110px;
+        height: 110px;
+    }
+    
+    
+    .indicate_line, .indicate_box{
+    display: none;
+}
+    
+    .dp1_title, .dp1_subj{
+        display: none;
+    }
+    
+    .popup_pbox{
+        display: block;
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+        height: 20%;
+        position: relative;
+    }
+    
+    
+    .popup_pbox p{
+        margin: 5% auto;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #aafff0;
+        text-shadow: 0px 0px 10px #aafff0;
+    }
+    
+    
+    
+    .popup_pbox p:nth-of-type(1){
+        font-size: 1.8em;
+        letter-spacing: 0.5em;
+    }
+    
+    .popup_pbox p:nth-of-type(2){
+        font-size: 1.2em;
+        line-height: 1.2em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

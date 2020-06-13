@@ -1,0 +1,25 @@
+        #skipNav{
+             position:relative;
+             width:100%;
+             overflow:hidden;
+            z-index: 110;
+            background-color: #fff;
+        }
+        
+        #skipNav a{
+              display:block; 
+              height:1px;
+              margin-bottom:-1px;
+              overflow:hidden; 
+              text-align:center; 
+              text-decoration:none; 
+              color:#333; 
+              font-weight: bold;
+              font-size:15px;
+        }
+        
+        #skipNav a:hover,#skipNav a:focus,#skipNav a:active{
+               display:block;
+               height:auto;
+               padding:5px 0;
+               background:none;}

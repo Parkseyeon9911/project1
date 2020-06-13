@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<html xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>NASA :: SPACE EXPLORATION</title>
+<link rel="shortcut icon"  type="image/x-icon"  href="favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="app_icon.png">
+<link rel="apple-touch-startup-image" href="startup.png">
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/page_load.css">
+
+<script src="js/prefixfree.min.js"></script>
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery.transit.js"></script>
+<script src="js/masonry-docs.min.js"></script>
+<script src="js/common.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
+
+<script>
+	// <![CDATA[
+		try {
+			window.addEventListener('load', function(){
+	    	    setTimeout(scrollTo, 0, 0, 1); 
+	    	}, false);
+		} catch(e) {}
+	// ]]>
+</script>
+<!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<style>
+    
+        #wrap{
+        position: relative;
+        top: 0;
+        left:0px;
+        clear: both;
+        float: none;
+        display: block;
+        margin-left: 70px;
+        width: auto;
+        height: 100%;
+    }
+
+
+    section{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    article{
+        position: relative;
+        width: 100%;
+        height: 100%;
+/*        background-color: #1e2222;*/
+        background:url(images/pg_loading_background2.jpg) center center no-repeat;
+        background-size: cover;
+        border-bottom: 2px solid rgba(153,173,173,0.5);
+    }
+    
+    .display1{
+        overflow: hidden;
+    }
+    
+    .dp1_title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 8em;
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-align: left;
+        margin: 3%;
+        text-shadow: 0px 0px 4px rgba(0,0,0,1), 0px 0px 4px rgba(0,0,0,1), 0px 0px 4px rgba(0,0,0,1), 0px 0px 4px rgba(0,0,0,1);
+    }
+    
+    
+    .dp1_bg{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .clip_bg{
+      clip: rect(0, auto, auto, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .cover_bg{
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      pointer-events: none;
+    }
+    
+    .main_bg{
+      height: 100%;
+      background:url(images/aboutus_dp1_background.jpg) center no-repeat;
+      background-size: cover;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    .dp_layout_box{
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    .dp_layout_box img{
+        width: 100%;
+    }
+    .dp_layout_box p{
+        text-align: left;
+        margin: 0 5%;
+        text-indent: 3%;
+    }
+    
+    .dp_layout_box li{
+        display: block;
+        width: 25%;
+        height: 100%;
+        float: left;
+        animation-duration: 1.5s;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+        border-right: 2px solid rgba(153,173,173,0.5);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    
+    
+    .title_box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    
+    .title{
+        width: 100%;
+        text-align: center;
+        font-size: 8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        
+    }
+    
+    .dp_layout_box .admin_name{
+        width: 100%;
+        margin-top: 5%;
+        font-size: 2em;
+        color: #aafff0;
+        text-shadow: 0px 0px 5px #aafff0;
+        text-align: center;
+        text-indent: 0;
+    }
+    
+    
+    .subj{
+        font-size: 1.1em;
+        color: #99ADAD;
+        text-align: center;
+    }
+    
+    @keyframes li_mv{
+        0%{
+            margin-top: 200%;
+        }
+        
+        100%{
+            margin-top: 0%;
+        }
+    }
+    
+    @keyframes li_mv_sub{
+        0%{
+            margin-top: -200%;
+        }
+        
+        100%{
+            margin-top: 0%;
+        }
+    }
+    
+    .display2 .dp_layout_depth1, .display2 .dp_layout_depth3, .display4 .dp_layout_depth1, .display4 .dp_layout_depth3{
+        margin-top: 200%;
+        animation-name: li_mv;
+    }
+    
+    .display2 .dp_layout_depth2, .display2 .dp_layout_depth4, .display4 .dp_layout_depth2, .display4 .dp_layout_depth4{
+        margin-top: -200%;
+        animation-name: li_mv_sub;
+    }
+    
+    .display3 .dp_layout_depth1, .display3 .dp_layout_depth3{
+        margin-top: -200%;
+        animation-name: li_mv_sub;
+    }
+    
+    .display3 .dp_layout_depth2, .display3 .dp_layout_depth4{
+        margin-top:200%;
+        animation-name: li_mv;
+    }
+    
+    
+    .display2 .dp_layout_depth3{
+        background: url(images/aboutus_dp2_layout3.jpg) right no-repeat;
+        background-size: cover;
+    }
+    
+    .display2 .dp_layout_depth4{
+        background: url(images/aboutus_dp2_layout4.jpg) left no-repeat;
+        background-size: cover;
+    }
+    
+    
+    .display3 .dp_layout_depth1{
+        background: url(images/aboutus_dp3_layout1.jpg) right no-repeat;
+        background-size: cover;
+    }
+    
+    .display3 .dp_layout_depth2{
+        background: url(images/aboutus_dp3_layout2.jpg) left no-repeat;
+        background-size: cover;
+    }
+    
+    .display4 img{
+        width: 100%;
+    }
+    
+    .display4{
+        display: flex;
+        align-items: center;
+    }
+    
+    .dp_layout_depth2, .dp_layout_depth3{
+        box-shadow: inset 10px 0px 30px rgba(0,0,0,0.5), inset -10px 0px 30px rgba(0,0,0,0.5);
+    }
+    
+    
+    .location_address{
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        width: auto;
+        text-align: right;
+        color: #fff;
+        font-size: 2em;
+    }
+
+/* 메인 슬라이드*/
+
+
+/*메인슬라이드 인디케이트*/
+
+    
+    
+    
+@media screen and (max-width:1024px) {
+#content{ width:auto; margin:0; }
+    
+    #wrap{
+        margin-left: 0px;
+    }
+    
+    
+    .dp1_title, .title{
+        font-size: 6em;
+    }
+    
+    }
+    
+@media screen and (max-width:768px) {
+    
+    
+    .dp_layout_box li{
+        width: 33.33%;
+    }
+    
+    .display2 .dp_layout_depth3, .display3 .dp_layout_depth2, .display4 .dp_layout_depth4{
+        display: none;
+    }
+    
+    .display2 .dp_layout_depth2{
+        background: url(images/aboutus_dp2_layout3.jpg) right no-repeat;
+        background-size: cover;
+        border: none;
+        box-shadow: none;
+    }
+    
+    
+    .display3 .dp_layout_depth3{
+        background: url(images/aboutus_dp3_layout2.jpg) left no-repeat;
+        background-size: cover;
+        box-shadow: none;
+    }
+    
+    
+    .display3 .dp_layout_depth1{
+        border-right: none;
+    }
+    
+    .subj{
+        color: #fff;
+        text-shadow: 0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1), 0px 0px 1px rgba(0,0,0,1);
+    }
+    
+    .dp1_title, .title{
+        font-size: 4.5em;
+    }
+    
+
+    }
+    
+    
+@media screen and (max-width:640px) {
+    .dp_layout_box li{
+        width: 50%;
+    }
+    
+    .display2 .dp_layout_depth4, .display3 .dp_layout_depth1, .display4 .dp_layout_depth1, .display2 img, .display3 img{
+        display: none;
+    }
+    
+    
+    .display2 .dp_layout_depth1{
+        background: url(images/aboutus_dp2_layout3.jpg) right no-repeat;
+        background-size: cover;
+    }
+    
+    .display2 .dp_layout_depth2{
+        background: url(images/aboutus_dp2_layout4.jpg) left no-repeat;
+        background-size: cover;
+    }
+    
+    .display3 .dp_layout_depth3{
+        background: url(images/aboutus_dp3_layout1.jpg) right no-repeat;
+        background-size: cover;
+    }
+    
+    .display3 .dp_layout_depth4{
+        background: url(images/aboutus_dp3_layout2.jpg) left no-repeat;
+        background-size: cover;
+    }
+    
+    .dp1_title, .title{
+        font-size: 3em;
+    }
+    
+    
+    }
+    
+    
+</style>
+</head>
+
+<body>
+<? include 'header.html' ?>
+<div id="wrap">
+	<section>    
+       <h2 class="hidden">기업 소개</h2>
+        <article class="display1" id="content1">
+       <h3 class="hidden">ABOUT NASA</h3>
+        <div class="dp1_bg">
+            <div class="clip_bg">
+                <div class="cover_bg main_bg"></div>
+            </div>
+            <p class="dp1_title bold">ABOUT NASA</p>
+        </div>
+	    </article>
+	    <article class="display2" id="content2">
+       <h3 class="hidden">관리자 소개</h3>
+           <div class="title_box">
+            <p class="title line_txt">LEADERSHIP</p>
+           </div>
+            <ul class="dp_layout_box">
+                <li class="dp_layout_depth1">
+                <img src="images/aboutus_dp2_layout1.jpg" alt="">
+                <p class="admin_name">Administrator<br>Jim Bridenstine</p>
+                </li>
+                <li class="dp_layout_depth2">
+                    <p class="subj">
+                        James Frederick “Jim” Bridenstine was nominated by President Donald Trump, confirmed by the U.S. Senate, and sworn in as NASA’s 13th administrator on April 23, 2018.</p> 
+                        <p class="subj">Bridenstine was elected in 2012 to represent Oklahoma’s First Congressional District. In Congress he served on the Armed Services Committee and the Science, Space and Technology Committee. </p>
+                </li>
+                <li class="dp_layout_depth3">
+                </li>
+                <li class="dp_layout_depth4">
+                </li>
+            </ul>
+	    </article>
+	    <article class="display3" id="content3">
+       <h3 class="hidden">부관리자 소개</h3>
+           <div class="title_box">
+            <p class="title line_txt">DEPUTY<br>ADMIN</p>
+           </div>
+            <ul class="dp_layout_box">
+                <li class="dp_layout_depth1"></li>
+                <li class="dp_layout_depth2"></li>
+                <li class="dp_layout_depth3"><p class="subj">James W. Morhard was nominated by President Trump and confirmed to be NASA’s 14th Deputy Administrator. He was sworn in on October 17th, 2018.</p></li>
+                <li class="dp_layout_depth4">
+                   <img src="images/aboutus_dp3_layout4.jpg" alt="">
+                    <p class="admin_name">Deputy Administrator<br>Jim Morhard</p>
+                </li>
+            </ul>
+	    </article>
+	    <article class="display4" id="content4">
+       <h3 class="hidden">위치</h3>
+            <div class="title_box">
+            <p class="title line_txt">LOCATION</p>
+           </div>
+            <ul class="dp_layout_box">
+                <li class="dp_layout_depth1">
+                    <img src="images/aboutus_dp4_layout1.jpg" alt="">
+                </li>
+                <li class="dp_layout_depth2">
+                    <img src="images/aboutus_dp4_layout2.jpg" alt="">
+                </li>
+                <li class="dp_layout_depth3">
+                    <img src="images/aboutus_dp4_layout3.jpg" alt="">
+                </li>
+                <li class="dp_layout_depth4">
+                    <img src="images/aboutus_dp4_layout4.jpg" alt="">
+                </li>
+            </ul>
+            <p class="location_address">Washington, DC 20546-0001<br>(202) 358-0000</p>
+	    </article>
+	    
+<? include 'footer.html' ?>
+	</section>
+</div>
+<script>
+    
+
+    $(document).ready(function(){
+        
+                
+        
+        
+        var screenSize = $(window).width();
+		var screenHeight = $(window).height();
+  	    var current=false;
+        
+        
+        
+        
+        
+        
+//        모바일사이즈 이벤트(비디오 감추기)
+		
+  	if(screenSize > 640){
+        
+        
+      }
+    if(screenSize <= 640){
+        
+        
+    }
+        
+    if(screenSize > 768){
+      }
+    if(screenSize <= 768){
+        
+    }
+        
+//      태블릿 사이즈 이벤트 메인타이틀 감추기
+        
+      if(screenSize > 1024){
+           
+      }
+       if(screenSize <= 1024){
+      }
+        
+        
+        
+  	
+//        리사이즈 메소드
+        
+        
+   var nav_current=0;
+   $(window).resize(function(){
+       
+       
+       
+        screenSize = $(window).width();
+		screenHeight = $(window).height();
+       
+       
+//       사이트맵 이벤트
+       
+       if(screenSize > 768){
+           
+      }
+       
+       if(screenSize <=768){
+           
+       }
+       
+       
+       
+       
+       
+       
+      if( screenSize > 640 && current==false){
+      	
+          
+      } 
+       
+      if(screenSize <= 640){
+          
+          
+      }
+//       
+      if(screenSize > 1024){
+           
+      }
+       if(screenSize <= 1024){
+        
+        
+        
+    }
+
+        
+        
+        
+        
+        
+        
+        
+        
+      
+    })  
+        
+        
+        
+        
+//        스크롤 이벤트
+        
+        
+        $(window).scroll(function(){
+            var now_scroll = $(window).scrollTop()
+            
+            console.log(now_scroll)
+            $('article').each(function(i,ee){
+            if(now_scroll > $('article').eq(i).offset().top){
+            $('article').eq(i).find('li').css({
+                animationPlayState:'running'
+            })
+            $('article').eq(i).find('.title_box').animate({
+                opacity:0
+            },500)
+                
+                setTimeout(function(){
+                    $('article').eq(i).find('.title_box').hide()
+                    
+                },500)
+            }
+
+//        
+            })
+            
+            
+            
+    })
+    })
+    
+</script>
+</body>
+</html>

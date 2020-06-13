@@ -1,0 +1,189 @@
+#wrap{
+    height: 100%;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+
+article{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: rgba(0,0,0,1);
+}
+
+
+
+    
+.dp1_title{
+    width: auto;
+    height: auto;
+    font-size: 1.8em;
+    color: #fff;
+    margin: 5% 0 0 5%;
+    }
+    
+    
+.dp1_subbn{
+        margin-left: 5%;
+        float: left;
+    }
+
+    
+.dp1_subj{
+    width: 35%;
+    float: right;
+    margin-right: 5%;
+    color: #fff;
+    font-size: 1.5em;
+    }
+    
+    
+.dp2_title{
+    width: auto;
+    height: auto;
+    font-size: 1.8em;
+    text-align: right;
+    color: #000;
+    margin: 5% 5% 0 0;
+    }
+/*
+    
+.bottom_nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 50;
+}
+
+.bottom_nav ul{
+    margin: 10px auto;
+    width: 90%;
+    height: 20%;
+    display: block;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom_nav ul li{
+    display: block;
+    float: left;
+    width: 20%;
+    height : 100%;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+.bottom_nav ul .now{
+    background-color: #e1262a;
+    color: rgba(255,255,255,1);
+}
+
+
+.bottom_nav .circle_outline{
+    display: block;
+    width: 15%;
+    height: 0;
+    padding-bottom: 15%;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 3px solid #e1262a;
+    z-index: 100;
+}
+
+.bottom_nav .circle_outline:after{
+    content: "";
+    display: block;
+    width: 85%;
+    height: 0;
+    padding-bottom: 85%;
+    margin: 7.5%;
+    background-color: #e1262a;
+    border-radius: 50%;
+}    
+*/
+    
+    
+    .infomation_box{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+    }
+    
+    .infomation_box li{
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        position: relative;
+        margin-bottom: 5%;
+    }
+    
+    .infomation_box li:last-of-type{
+        margin-bottom: 0;
+    }
+    
+    .sub_title{
+        color: #fff;
+        position: absolute;
+        width: 35%;
+        top: 15%;
+        left: 55%;
+        margin-top: -1em;
+        margin: 0 5%;
+        font-size: 1.5em;
+        text-align: left;
+        
+    }
+    
+    .ceo_name{
+        position: absolute;
+        bottom: 0;
+        left: 55%;
+        margin-left: 5%;
+        color: #fff;
+        font-size: 0.8em;
+    }
+    
+    
+    .dp2_subbn{
+        float: right;
+        margin-right: 5%;
+    }
+    
+    .dp2_sub_title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 5%;
+        width:40%;
+        height: auto;
+        float: left;
+        color: #000;
+        font-size: 1.15em;
+    }
+    
+    .dp3_title{
+        width: 90%;
+        margin: 0 5%;
+        font-size: 1.8em;
+        text-align: center;
+        margin-bottom: 5%;
+        color: #000;
+    }
