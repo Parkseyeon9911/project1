@@ -171,7 +171,19 @@ body {
 .paused{
     animation-play-state: paused;
 }
-    
+
+
+.nonepaused{
+    display: none;
+    animation-play-state: paused;
+}
+
+
+.blockrunning{
+    display: block;
+    animation-play-state: running;
+}
+
     
 @keyframes objscaleAni{
     0%{

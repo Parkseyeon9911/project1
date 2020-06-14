@@ -1,4 +1,4 @@
-
+select::-ms-expand {display:none}
 
 html,body{
     height: auto;
@@ -238,7 +238,7 @@ section{
 
 
 
-        .phonecall label[for="phonecall"], .birthd label[for="birthday"]{
+        .phonecall label[for="phone_0"], .birthd label[for="bd_year"]{
             top: -30px;
             left: 0;
             height: 30px;

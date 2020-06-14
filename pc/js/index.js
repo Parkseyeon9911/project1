@@ -2,6 +2,14 @@
     $(document).ready(function(){
         
         
+        var agent = navigator.userAgent.toLowerCase();
+
+        if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) ) {
+
+            $('.scroll_focus').remove()
+
+        }
+        
     $('article').children().addClass('focus_blur')
 //        스크롤 액션
         
@@ -28,15 +36,6 @@
 //      인디케이트 버튼 클릭시 액션 추가
     $('.indicate > .indicate_circle').on("click",function(){
             
-            
-        $('.scroll_focus').css({
-        display:'none',
-        animationPlayState: 'paused'})
-            
-        $('.scroll_focus > div').css({
-        display:'none',
-        animationPlayState: 'paused'})
-        
         $('article').children().addClass('focus_blur')
         
         var cir_num = $('.indicate > .indicate_circle').index($(this))
@@ -75,18 +74,19 @@
         }
         )
         
-//        if(moving == false){
                 
         var blur_mv = $('article:nth-of-type('+(curr+1)+')')
-                
                 
         $('.scroll_focus').css({
         display:'block',
         animationPlayState: 'running'})
             
-        $('.scroll_focus > div').css({
+        $('.scroll_focus div').css({
         display:'block',
-        animationPlayState: 'running'})
+        borderColor:'#f00',
+        animationPlayState:'running'})
+        
+        
         
         
         if(tt == '-200%'){
@@ -101,11 +101,12 @@
             })
         }
         
+        
+        
         setTimeout(function(){
             blur_mv.children().removeClass('focus_blur')         
-        },1000)              
+        },1000)
         $('article:nth-of-type('+(curr+2)+')').children().addClass('focus_blur')
-//        $('article:nth-of-type('+(curr+1)+')').children().addClass('running')
         
         $('article').eq(curr).children().css({
                 animationPlayState:'running'
@@ -119,19 +120,19 @@
     }
         
         
-    $('html,body').on('mousewheel',function(e){
+    $('html,body').on('mousewheel DOMMouseScroll',function(e){
         
         if(moving){
             
           var delta = 0
         
-        if(e.originalEvent.wheelDelta < 0){
+        if(e.originalEvent.wheelDelta < 0 || e.originalEvent.detail > 0){
             
            delta = 1
             
            }
             
-        else if(e.originalEvent.wheelDelta >0){
+        else if(e.originalEvent.wheelDelta >0 || e.originalEvent.detail < 0){
             
             delta = -1
             
@@ -142,8 +143,7 @@
         animationPlayState: 'paused'})
             
         $('.scroll_focus > div').css({
-        display:'none',
-        animationPlayState: 'paused'})
+        display:'none'})
             
             
         $('article').children().addClass('focus_blur')
@@ -173,38 +173,10 @@
             'image/dp3_slide_q.png':'image/dp3_background4.jpg',
             'image/dp3_slide_vlux5.png':'image/dp3_background5.jpg'
         }
-//        console.log(imgsrc)
         $('.camera_img').attr('src',imgsrc)
         $('.dp3_background').attr('src',backimg[imgsrc])
     })
      
-//        
-//        $('.quick_area').hover(
-//            function () {
-//                $('.quick_area .quick_menu ul').fadeIn('normal', function () {
-//                    $(this).stop();
-//                });
-//                $('.sub_menu').slideDown('fast', function () {
-//                    $(this).stop();
-//                });
-//            },
-//            function () {
-//                $('.quick_area .quick_menu ul').fadeOut('fast');
-//                $('.sub_menu').slideUp('normal');
-//            });
-
-        
-        
-//        $('ul.dropdownmenu li.menu .depth1').on('focus', function () {
-//            $('ul.dropdownmenu li.menu ul').slideDown('fast');
-//            $('.menu_box').slideDown('fast');
-//        });
-//
-//        $('ul.dropdownmenu li.m6 li:last').find('a').on('blur', function () {
-//            $('ul.dropdownmenu li.menu ul').slideUp('fast');
-//            $('.menu_box').slideUp('fast');
-//        });
-        
         
         
     });

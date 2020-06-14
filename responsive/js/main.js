@@ -11,6 +11,19 @@
         var dp1_titleHg = $('.dp1_title').height();
         
         
+        var circle_top = '-'+(parseInt($('.galaxy_circle').css('padding-top'))/2)+'px'
+        var circle_back_top = '-'+(parseInt($('.galaxy_circle_background').css('padding-top'))/2)+'px'
+        
+        
+        $('.galaxy_circle').css({
+            marginTop:circle_top
+        })
+        
+        $('.galaxy_circle_background').css({
+            marginTop:circle_back_top
+        })
+        
+        
 //        첫번째 메인 타이틀 여백 만들어두는 이벤트
             $('.dp2_subj').css({
                 marginTop:dp1_titleHg
@@ -58,7 +71,19 @@
        
         screenSize = $(window).width();
 		screenHeight = $(window).height();
-		  
+       
+       
+        var circle_top = '-'+(parseInt($('.galaxy_circle').css('padding-top'))/2)+'px'
+        var circle_back_top = '-'+(parseInt($('.galaxy_circle_background').css('padding-top'))/2)+'px'
+        
+        
+        $('.galaxy_circle').css({
+            marginTop:circle_top
+        })
+        
+        $('.galaxy_circle_background').css({
+            marginTop:circle_back_top
+        })
        
         dp1_titleHg = $('.dp1_title').height()
             
@@ -147,13 +172,15 @@
                 var dp2_titleHg = $('.dp2_title').offset().top+$('.dp2_title').height()
                 $('.dp1_title').css({
                     position:'absolute',
-                    top:dp2_titleHg
+                    top:dp2_titleHg,
+                    marginTop:0
                 })
             }
             else{
                 $('.dp1_title').css({
                     position:'fixed',
-                    top:'auto'
+                    top:'auto',
+                    marginTop:'-1.5em'
                 })
             }
             

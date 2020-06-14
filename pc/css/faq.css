@@ -158,27 +158,32 @@ article{
     background: url(../image/support/shortcut_img1.jpg) center center no-repeat;
     background-size: cover;
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 
 .img_layout > li:nth-of-type(2){
     background: url(../image/support/shortcut_img2.jpg) center center no-repeat;
     background-size: cover;
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 .img_layout > li:nth-of-type(3){
     background: url(../image/support/shortcut_img3.jpg) center center no-repeat;
     background-size: cover;
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 .img_layout > li:nth-of-type(4){
     background: url(../image/support/shortcut_img4.jpg) center center no-repeat;
     background-size: cover;
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 .img_layout > li:nth-of-type(5){
     background: url(../image/support/shortcut_img5.jpg) center center no-repeat;
     background-size: cover;
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 
 .faq_box .dp1_warranty{

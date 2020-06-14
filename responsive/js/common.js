@@ -1,14 +1,37 @@
 
     $(window).load(function() {    
-//        setTimeout(function(){
+        setTimeout(function(){
           
         $('.pg_loading').hide();    
-//        })
+        })
     });
 
 
 
 $(document).ready(function(){
+    
+    
+    
+        var earth_top = '-'+(parseInt($('.pg_loading_earth').css('padding-top'))/2)+'px'
+        var outline_top = '-'+(parseInt($('.loading_outline').css('padding-top'))/2)+'px'
+        var galaxy_top = '-'+(parseInt($('.loading_galaxy').css('padding-top'))/2)+'px'
+        
+        
+        $('.pg_loading_earth').css({
+            marginTop:earth_top,
+            marginLeft:earth_top
+        })
+    
+        $('.loading_outline').css({
+            marginTop:outline_top,
+            marginLeft:outline_top
+        })
+    
+        $('.loading_galaxy').css({
+            marginTop:galaxy_top,
+            marginLeft:galaxy_top
+        })
+        
     
         var screenSize = $(window).width();
 		var screenHeight = $(window).height();
@@ -69,6 +92,25 @@ $(document).ready(function(){
  var nav_current=0;
    $(window).resize(function(){
        
+        var earth_top = '-'+(parseInt($('.pg_loading_earth').css('padding-top'))/2)+'px'
+        var outline_top = '-'+(parseInt($('.loading_outline').css('padding-top'))/2)+'px'
+        var galaxy_top = '-'+(parseInt($('.loading_galaxy').css('padding-top'))/2)+'px'
+        
+        
+        $('.pg_loading_earth').css({
+            marginTop:earth_top,
+            marginLeft:earth_top
+        })
+    
+        $('.loading_outline').css({
+            marginTop:outline_top,
+            marginLeft:outline_top
+        })
+    
+        $('.loading_galaxy').css({
+            marginTop:galaxy_top,
+            marginLeft:galaxy_top
+        })
        
        
         screenSize = $(window).width();

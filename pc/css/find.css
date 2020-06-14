@@ -112,12 +112,11 @@ article:after{
 .info_ui_box li{
     display: block;
     overflow: hidden;
-    width: calc(100% / 3);
+    width: 33.33%;
     height: auto;
     color: #fff;
     float: left;
     border-left: 3px solid #e1262a;
-/*    border-right: 3px solid #e1262a;*/
     box-sizing: border-box;
 }
 

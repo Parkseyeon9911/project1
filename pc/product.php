@@ -216,7 +216,7 @@ $(document).ready(function(){
         <article id="content3" class="display3">
         <h3 class="hidden">제품 비디오</h3>
           <iframe src="https://player.vimeo.com/video/368004670?title=0&byline=0&portrait=0" width="800" height="450" allow="autoplay; fullscreen" style="position:relative; float: right; display: block; margin: 20px 0px" allowfullscreen></iframe>
-            <p class="sub_title bold garamond">A UNIQUE APPROACH TO PHOTOGRAPHY</p>
+            <p class="sub_title bold">A UNIQUE APPROACH TO PHOTOGRAPHY</p>
            <div class="size_wrap">
                 <img src="image/product/<? echo $pd; ?>/dp2_subimg.png" alt="" class="dp2_mainimg">
            </div>

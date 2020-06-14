@@ -282,10 +282,12 @@
         
         .title_end{
             position: absolute;
-            font-size: 5em;
+            font-size: 70px;
             letter-spacing: 10px;
             display: block;
+            top: 50%;
             left: 0;
+            margin-top: -35px;
             width: 100%;
             text-align: center;
 /*            color: #959cff;*/
@@ -338,6 +340,7 @@
             text-decoration: none;
             text-align: center;
             line-height: 50px;
+            display: block;
         }
         
         

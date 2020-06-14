@@ -15,11 +15,11 @@ body::-webkit-scrollbar{
         
         @keyframes focus_on{
             0%{
-                opacity: 1;
                 margin-left: -150px;
                 margin-top: -150px;
                 width: 300px;
                 height: 300px;
+                opacity: 1;
             }
             
             25%{
@@ -27,79 +27,56 @@ body::-webkit-scrollbar{
                 margin-top: -75px;
                 width: 150px;
                 height: 150px;
-            }
-            
-            50%{
-                margin-left: -75px;
-                margin-top: -75px;
-                width: 150px;
-                height: 150px;
-            }
-            
-            75%{
-                margin-left: -75px;
-                margin-top: -75px;
-                width: 150px;
-                height: 150px;
-            }
-            
-            100%{
-                margin-left: -75px;
-                margin-top: -75px;
-                width: 150px;
-                height: 150px;
-                opacity: 1;
-            }
-            
-            
-        }
-        
-        @keyframes focus_resize{
-            
-            0%{
-                width: 80px;
-                height: 80px;
-                border-color: #f00;
-                border-width: 3px;
-            }
-            
-            25%{
-                width: 75px;
-                height: 75px;
-                margin: 0;
-                border-color: #fff;
-                border-width: 3px;
                 opacity: 1;
             }
             
             50%{
-                width: 75px;
-                height: 75px;
-                margin: 0;
-                border-color: #fff;
-                border-width: 3px;
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
                 opacity: 0;
             }
             
             75%{
-                width: 75px;
-                height: 75px;
-                margin: 0;
-                border-color: #fff;
-                border-width: 3px;
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
                 opacity: 1;
             }
             
             100%{
-                width: 75px;
-                height: 75px;
-                margin: 0;
-                border-color: #fff;
-                border-width: 3px;
+                margin-left: -75px;
+                margin-top: -75px;
+                width: 150px;
+                height: 150px;
                 opacity: 1;
             }
+            
+            
         }
 
+@keyframes focus_resize{
+    0%{
+        border-color: #f00;
+    }
+    
+    25%{
+        
+        border-color: #fff;
+    }
+    
+    50%{
+        border-color: #fff;
+    
+    }
+    
+    100%{
+        border-color: #fff;
+        
+    }
+}
 
 
 
@@ -132,10 +109,33 @@ body::-webkit-scrollbar{
 }
 
 
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+svg img{
+    filter:url(#blur);
+}
+
+.blur{
+  display: none;
+  transform: scale(1.4);    
+}
+
+html[data-agent*="Trident"] .blur-wrapper .blur {
+  display: none; }
+
+html[data-agent*="Trident"] .blur-wrapper .blur-ie {
+  display: block; }
+
 
 .focus_blur{
             filter:blur(30px);
-              -webkit-filter: blur(30px);
+            -webkit-filter: blur(30px);
         }
         
         .scroll_focus{
@@ -157,17 +157,16 @@ body::-webkit-scrollbar{
             animation-delay: 1s;
             animation-direction: alternate;
             animation-fill-mode: backwards;
+            box-sizing: border-box;
         }
         
-        .scroll_fc_tplf{
+
+        .scroll_focus div{
             width: 80px;
             height: 80px;
-            border-top: 3px solid #f00;
-            border-left: 3px solid #f00;
+            border-color: #f00;
             box-sizing: border-box;
-            float: left;
             display:none;
-            margin-bottom: 140px;
             animation-name: focus_resize;
             animation-timing-function: linear;
             animation-play-state: paused;
@@ -175,60 +174,39 @@ body::-webkit-scrollbar{
             animation-delay: 1s;
             animation-direction: alternate;
             animation-fill-mode: forwards;
+        }
+
+        .scroll_fc_tplf{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top: 3px solid;
+            border-left: 3px solid;
         }
         
         
         .scroll_fc_tprg{
-            width: 80px;
-            height: 80px;
-            border-top: 3px solid #f00;
-            border-right: 3px solid #f00;
-            box-sizing: border-box;
-            display:none;
-            float: right;
-            margin-bottom: 140px;
-            animation-name: focus_resize;
-            animation-timing-function: linear;
-            animation-duration: 1s;
-            animation-delay: 1s;
-            animation-play-state: paused;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: 3px solid;
+            border-right: 3px solid;
         }
         
         .scroll_fc_btlf{
-            width: 80px;
-            height: 80px;
-            border-bottom: 3px solid #f00;
-            border-left: 3px solid #f00;
-            box-sizing: border-box;
-            clear: both;
-            float: left;
-            display:none;
-            animation-name: focus_resize;
-            animation-timing-function: linear;
-            animation-play-state: paused;
-            animation-duration: 1s;
-            animation-delay: 1s;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            border-bottom: 3px solid;
+            border-left: 3px solid;
         }
         
         .scroll_fc_btrg{
-            width: 80px;
-            height: 80px;
-            border-bottom: 3px solid #f00;
-            border-right: 3px solid #f00;
-            box-sizing: border-box;
-            float: right;
-            display:none;
-            animation-name: focus_resize;
-            animation-timing-function: linear;
-            animation-duration: 1s;
-            animation-delay: 1s;
-            animation-play-state: paused;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-bottom: 3px solid;
+            border-right: 3px solid;
         }
 
 
@@ -476,6 +454,8 @@ body::-webkit-scrollbar{
 
 .dp4_mainbn{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: url(../image/dp4_background.jpg) center center no-repeat;
