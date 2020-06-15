@@ -1,6 +1,68 @@
 
      
 $(document).ready(function(){
+    
+    
+    
+    
+var winwid = $(window).width()
+var winhei = $(window).height()
+ var dp2_circlewid = '-'+(parseInt($('.background_circle').css('width'))/2)+'px'
+ var dp2_camwid = '-'+(parseInt($('.dp2_camera').css('width'))/2)+'px'
+ var academy_slid_wid = (parseInt($('.academy_slide').css('width')))+'px'
+ var instor_img_hei = (parseInt($('.academy_over').outerHeight()))+'px'
+ 
+ 
+ console.log(instor_img_hei)
+ 
+ $('.background_circle').css({
+     marginTop:dp2_circlewid,
+     marginLeft:dp2_circlewid
+ })
+    
+    
+ $('.dp2_camera').css({
+     marginTop:dp2_camwid,
+ })
+    
+    
+$('.academy_slide').css({
+    height:academy_slid_wid
+})
+ 
+//$('.instructor_img').css({
+//    width:instor_img_hei
+//})
+    
+$(window).resize(function(){
+    
+        
+var winwid = $(window).width()
+var winhei = $(window).height()
+ var dp2_circlewid = '-'+(parseInt($('.background_circle').css('width'))/2)+'px'
+ var dp2_camwid = '-'+(parseInt($('.dp2_camera').css('width'))/2)+'px'
+ var academy_slid_wid = (parseInt($('.academy_slide').css('width')))+'px'
+ console.log(winhei)
+ 
+ $('.background_circle').css({
+     marginTop:dp2_circlewid,
+     marginLeft:dp2_circlewid
+ })
+    
+    
+ $('.dp2_camera').css({
+     marginTop:dp2_camwid,
+ })
+    
+    
+$('.academy_slide').css({
+    height:academy_slid_wid
+})
+    
+    
+})
+    
+    
 
 $('#wrap').scroll(function(e){
     var now_scroll = $(this).scrollTop();
@@ -264,7 +326,7 @@ else{
         }
         
         
-        var at = -cc*320
+        var at = -cc*80+'%'
         
         $('.academy_over').stop().animate({
             left: at
