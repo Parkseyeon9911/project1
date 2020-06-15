@@ -1,5 +1,6 @@
 #wrap{
     height: 100%;
+    overflow: auto;
 }
 
 section{
@@ -12,7 +13,6 @@ article{
     position: relative;
     width: 100%;
     height: auto;
-    overflow: hidden;
     background: rgba(0,0,0,1);
 }
 
@@ -51,69 +51,6 @@ article{
     color: #000;
     margin: 5% 5% 0 0;
     }
-/*
-    
-.bottom_nav{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25%;
-    background-color: rgba(0,0,0,0.6);
-    z-index: 50;
-}
-
-.bottom_nav ul{
-    margin: 10px auto;
-    width: 90%;
-    height: 20%;
-    display: block;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-}
-
-.bottom_nav ul li{
-    display: block;
-    float: left;
-    width: 20%;
-    height : 100%;
-    color: rgba(255,255,255,0.7);
-    text-align: center;
-    font-weight: bold;
-    font-size: 1em;
-}
-
-
-.bottom_nav ul .now{
-    background-color: #e1262a;
-    color: rgba(255,255,255,1);
-}
-
-
-.bottom_nav .circle_outline{
-    display: block;
-    width: 15%;
-    height: 0;
-    padding-bottom: 15%;
-    border-radius: 50%;
-    margin: 0 auto;
-    border: 3px solid #e1262a;
-    z-index: 100;
-}
-
-.bottom_nav .circle_outline:after{
-    content: "";
-    display: block;
-    width: 85%;
-    height: 0;
-    padding-bottom: 85%;
-    margin: 7.5%;
-    background-color: #e1262a;
-    border-radius: 50%;
-}    
-*/
-    
     
     .infomation_box{
         width: 100%;
