@@ -21,27 +21,4 @@ $(document).ready(function(){
     
     
 })
-//var bottom_rd = $('.bottom_nav ul li').height()
-//console.log(bottom_rd)
-//    
-//$('.bottom_nav ul li').css({
-//    borderRadius:bottom_rd/2,
-//    lineHeight:bottom_rd+'px'
-//})
-//    
-//    
-//    
-//
-//$('.circle_outline').on('click',function(){
-//    console.log('ccc')
-//})    
-    
-    
-    
-    
-    
-    
-
-
-
     

@@ -15,10 +15,8 @@
     position: absolute;
         top: 50%;
         left: 50%;
-/*    height: 200px;*/
     height: auto;
     width: 20%;
-/*    min-width: 100px;*/
     padding-top: 20%;
     border-radius: 50%;
     border: 2px solid  rgba(255,255,255, .7);
@@ -63,23 +61,8 @@
         flex-direction: column;
         background: url(../images/pg_loading_background2.jpg) center center no-repeat;
         background-size: cover;
-/*        animation-name: */
     }
     
-/*
-    .center{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -10px;
-        width: 20px;
-        margin-left: -10px;
-        height: 20px;
-        background-color: #f00;
-        border-radius: 50%;
-        z-index: 100000;
-    }
-*/
     
     .loading_outline{
         position: absolute;
@@ -87,7 +70,6 @@
         left: 50%;
         height: auto;
         width: 80%;
-/*        min-width: 150px;*/
         padding-top: 80%;
         border-radius: 50%;
         border: 1px solid  rgba(255,255,255, .7);
@@ -190,20 +172,18 @@
     
     
         .loading_outline{
-            width: 700px;
-            height: 700px;
-            padding-top: 0;
+        width: 60%;
+        padding-top: 60%;
         }
+    
         .loading_galaxy{
-            width: 500px;
-            height: 500px;
-            padding-top: 0;
+            width: 30%;
+            padding-top: 30%;
         }
         
         .pg_loading_earth{
-            width: 300px;
-            height: 300px;
-            padding-top: 0;
+    width: 25%;
+    padding-top: 25%;
         }
         
         .area_gage{
@@ -222,20 +202,17 @@
     
     @media screen and (max-width:640px) {
         .loading_outline{
-            width: 400px;
-            height: 400px;
-            padding-top: 0;
+        width: 50%;
+        padding-top: 50%;
         }
         .loading_galaxy{
-            width: 300px;
-            height: 300px;
-            padding-top: 0;
+        width: 40%;
+        padding-top: 40%;
         }
         
         .pg_loading_earth{
-            width: 200px;
-            height: 200px;
-            padding-top: 0;
+        width: 30%;
+        padding-top: 30%;
         }
         
         .area_gage{

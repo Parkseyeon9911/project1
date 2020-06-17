@@ -1,5 +1,4 @@
 
-
     $(document).ready(function(){
         
                 
@@ -110,7 +109,7 @@
             
             console.log(now_scroll)
             $('article').each(function(i,ee){
-            if(now_scroll >= $('article').eq(i).offset().top){
+            if(now_scroll > $('article').eq(i).offset().top){
             $('article').eq(i).find('li').css({
                 animationPlayState:'running'
             })
@@ -131,4 +130,3 @@
             
     })
     })
-    

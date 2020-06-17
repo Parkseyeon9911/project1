@@ -184,19 +184,6 @@
                 })
             }
             
-//            console.log($('.dp1_title').css('position'))
-//            if($('.dp1_title').css('position') == 'absolute'){
-//                
-//                $('article').css({
-//                    backgroundColor:'#1e2225'
-//                },1000)
-//            }
-//            else{
-//                $('article').css({
-//                    backgroundColor:'#fff'
-//                })
-//            }
-//            
             
             
             
@@ -211,19 +198,6 @@
             
 //            스크롤이 일정영역을 넘어가면 배경색이 어두워지는 이벤트
             
-//            if(now_scroll > $('article:nth-of-type(3)').offset().top+($('article:nth-of-type(3)').height()/4)){
-//               var black_acc = (now_scroll-$('article:nth-of-type(3)').offset().top)/50/50
-////               console.log(black_acc)
-//               
-//               $('article').css({
-//                   backgroundColor:'rgba(0,0,0,'+black_acc+')'
-//               })
-//            }
-//            else{
-//                $('article').css({
-//                   backgroundColor:'rgba(0,0,0,0)'
-//               })
-//            }
             
             
             

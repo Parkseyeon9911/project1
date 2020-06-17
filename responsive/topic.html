@@ -15,12 +15,15 @@
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/page_load.css">
 
+<link rel="stylesheet" href="css/topic.css">
+
 <script src="js/prefixfree.min.js"></script>
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/jquery-migrate-1.4.1.min.js"></script>
 <script src="js/jquery.transit.js"></script>
 <script src="js/masonry-docs.min.js"></script>
 <script src="js/common.js"></script>
+<script src="js/topic.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
@@ -42,321 +45,6 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-<style>
-    
-        #wrap{
-        position: relative;
-        top: 0;
-        left:0px;
-        display: block;
-        margin-left: 70px;
-        width: auto;
-        height: 100%;
-/*
-        border-left: 1px solid rgba(255,255,255,0.1);
-    box-sizing: border-box;
-*/
-    }
-
-
-    section{
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    article{
-        position: relative;
-        width: 100%;
-        height: 100%;
-/*        height: auto;*/
-        background: url(images/pg_loading_background2.jpg) center center no-repeat;
-        background-size: cover;
-        overflow: hidden;
-    }
-    
-/*
-    .dp_layout_box{
-        overflow: hidden;
-        width: 94%;
-        margin: 3%;
-        box-sizing: border-box;
-        display: block;
-*/
-/*        background-color: #000;*/
-/*    }*/
-    
-/*
-    .dp_layout_box p{
-        margin: 2% 0;
-    }
-    
-*/
-/*
-    .dp_layout_box li{
-        position: relative;
-        padding: 3%;
-        width: calc(100% / 3);
-        height: auto;
-        float: left;
-        border: 1px solid #fff;
-        box-sizing: border-box;
-    }
-*/
-    
-/*
-    .dp_layout_box li:nth-of-type(1), .dp_layout_box li:nth-of-type(3), .dp_layout_box li:nth-of-type(6), .dp_layout_box li:nth-of-type(8){
-        box-shadow: 10px 0px 30px rgba(255,255,255,0.4), -10px 0px 30px rgba(255,255,255,0.4)
-    }
-*/
-    
-    
-/*
-    .dp_layout_box li:nth-of-type(3){
-        box-shadow: 10px 0px 30px rgba(255,255,255,0.4), -10px 0px 30px rgba(255,255,255,0.4)
-    }
-    
-*/
-/*
-    .dp_layout_box .horizen_box{
-        width: 100%;
-        box-shadow: 0px 10px 30px rgba(255,255,255,0.4)
-    }
-    
-    .dp_layout_box .size_2xl{
-        width: calc(100% / 3 * 2);
-    }
-*/
-    
-    
-    .horizen_area{
-        position: relative;
-        width: 100%;
-        height: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-    
-    
-    .horizen_area:nth-of-type(1) img{
-        position: absolute;
-        width: 150px;
-        height: 150px;
-    }
-    
-    .horizen_area:nth-of-type(1):before{
-        position: absolute;
-        left: -50%;
-        margin-left: -75px;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        box-shadow: 0px 0px 5px rgba(255,255,255,1);
-    }
-    
-    .horizen_area:nth-of-type(1):after{
-        position: absolute;
-        left: 50%;
-        margin-left: 75px;
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        box-shadow: 0px 0px 5px rgba(255,255,255,1);
-    }
-    
-    .title{
-        font-size: 1.5em;
-        text-align: left;
-        font-weight: bold;
-        color: #fff;
-        letter-spacing: 5px;
-    }
-    
-    .subj{
-        font-size: 0.9em;
-        color: #fff;
-    }
-    
-    .dp_layout_box{
-        overflow: hidden;
-        display: block;
-        height: 76%;
-        width: 94%;
-        margin: 0% 3%;
-        }
-    
-    .dp_layout_box > li{
-/*        border: 3px solid #f00;*/
-/*        box-sizing: border-box;*/
-        width: 25%;
-        height: 100%;
-        float: left;
-    }
-    
-    .dp_layout_box .main{
-        position: relative;
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .display1 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(1){
-        background: url(images/topic_earth_short1.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    .display1 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(2){
-        background: url(images/topic_earth_short2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    
-    .display2 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(1){
-        background: url(images/topic_moon_short1.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    .display2 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(2){
-        background: url(images/topic_moon_short2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    .display3 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(1){
-        background: url(images/topic_mars_short1.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    .display3 .dp_layout_box .dp_layout_box_depth2 li:nth-of-type(2){
-        background: url(images/topic_mars_short2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    
-    .dp_layout_box_depth2{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-    
-    .dp_layout_box_depth2 > li{
-        width: 100%;
-        height: 48%;
-    }
-    
-    .main img{
-        width: 50%;
-        min-width: 480px;
-    }
-    .sub_txt p{
-        margin: 3%;
-        text-indent: 3%;
-        font-size: 1.1em;
-        color: #fff;
-    }
-    
-    
-/* 메인 슬라이드*/
-
-
-/*메인슬라이드 인디케이트*/
-
-    
-    
-    
-@media screen and (max-width:1024px) {
-#content{ width:auto; margin:0; }
-    
-    #wrap{
-        margin-left: 0px;
-        margin-top: 70px;
-    }
-    
-    .main img{
-        width: 50%;
-        min-width: 380px;
-    }
-    
-    }
-@media screen and (max-width:768px) {
-    
-    article{
-        overflow: scroll;
-        height: auto;
-    }
-    
-    .dp_layout_box li, .dp_layout_box .main{
-        width: 50%;
-    }
-    
-/*
-    .dp_layout_box .main{
-        width: 50%;
-    }
-*/
-    
-    .display1 .dp_layout_box li:nth-of-type(3), .display2 .dp_layout_box li:nth-of-type(1), .display3 .dp_layout_box li:nth-of-type(3){
-        width: 100%;
-    }
-    
-    .dp_layout_box .sub_txt,.sub_txt p{
-        height: auto;
-    }
-    
-    .dp_layout_box_depth2{
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .display1 .dp_layout_box .dp_layout_box_depth2 li{
-        width: 49%;
-    }
-    
-    
-    }
-
-@media screen and (max-width:640px) {
-
-    .dp_layout_box > li, .dp_layout_box .main{
-        width: 100%;
-    }
-    
-    .dp_layout_box .sub_txt,.sub_txt p{
-        height: auto;
-    }
-    
-    .dp_layout_box_depth2{
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-/*
-    .display1 .dp_layout_box .dp_layout_box_depth2 li{
-        width: 49%;
-    }
-    
-*/
-    
-    }
-    
-    
-    
-</style>
 </head>
 
 <body>
@@ -365,7 +53,6 @@
 	<section>    
         <article class="display1" id="content1">
           <div class="horizen_area">
-<!--                    <img src="images/toppic_logo.png" alt="">-->
                <p class="title">EARTH</p>
             </div>
             <ul class="dp_layout_box">
@@ -374,7 +61,7 @@
 
 <p>We monitor Earth’s vital signs from land, air and space with a fleet of satellites and ambitious airborne and ground-based observation campaigns. NASA develops new ways to observe and study Earth's interconnected natural systems with long-term data records. The agency freely shares this unique knowledge and works with institutions around the world.</p></li>
                 <li class="main">
-                    <img src="images/topic_earth.png" alt="">
+                    <img src="images/topic_earth.png" alt="나사의 지구 연구에 관하여">
                 </li>
                 <li>
                     <ul class="dp_layout_box_depth2">
@@ -386,7 +73,6 @@
         </article>
         <article class="display2" id="content2">
           <div class="horizen_area">
-<!--                    <img src="images/toppic_logo_2.png" alt="">-->
            <p class="title">MOON</p>
             </div>
             <ul class="dp_layout_box">
@@ -401,17 +87,16 @@
                 </li>
                 
                 <li class="main">
-                    <img src="images/topic_moon.png" alt=""></li>
+                    <img src="images/topic_moon.png" alt="나사의 달 연구에 관하여"></li>
             </ul>
         </article>
         <article class="display3" id="content3">
           <div class="horizen_area">
-<!--                    <img src="images/toppic_logo_3.png" alt="">-->
            <p class="title">MARS</p>
             </div>
             <ul class="dp_layout_box">
                 <li class="main">
-                    <img src="images/topic_mars.png" alt=""></li>
+                    <img src="images/topic_mars.png" alt="나사의 화성 연구에 관하여"></li>
                 <li class="sub_txt">
                     <p>The fourth planet from the Sun, Mars is a dusty, cold, desert world with a very thin atmosphere.
 Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. </p>
@@ -430,123 +115,5 @@ Mars is one of the most explored bodies in our solar system, and it's the only p
 <? include 'footer.html' ?>
 	</section>
 </div>		
-<script>
-    
-
-    $(document).ready(function(){
-        
-                
-        
-        
-        var screenSize = $(window).width();
-		var screenHeight = $(window).height();
-  	    var current=false;
-        
-        
-        
-//        모바일사이즈 이벤트(비디오 감추기)
-		
-  	if(screenSize > 640){
-        
-        
-      }
-    if(screenSize <= 640){
-        
-        
-    }
-        
-    if(screenSize > 768){
-      }
-    if(screenSize <= 768){
-        
-    }
-        
-//      태블릿 사이즈 이벤트 메인타이틀 감추기
-        
-      if(screenSize > 1024){
-           
-      }
-       if(screenSize <= 1024){
-      }
-        
-        
-        
-  	
-//        리사이즈 메소드
-        
-        
-   var nav_current=0;
-   $(window).resize(function(){
-       
-       
-       
-        screenSize = $(window).width();
-		screenHeight = $(window).height();
-       
-       
-//       사이트맵 이벤트
-       
-       if(screenSize > 768){
-           
-      }
-       
-       if(screenSize <=768){
-           
-       }
-       
-       
-       
-       
-       
-       
-      if( screenSize > 640 && current==false){
-      	
-          
-      } 
-       
-      if(screenSize <= 640){
-          
-          
-      }
-//       
-      if(screenSize > 1024){
-           
-      }
-       if(screenSize <= 1024){
-        
-        
-        
-    }
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        스크롤 이벤트
-        
-        
-        $(window).scroll(function(){
-            var now_scroll = $(window).scrollTop()
-            
-            
-            
-
-            
-            
-            
-    })
-    })
-    })
-    
-</script>
 </body>
 </html>

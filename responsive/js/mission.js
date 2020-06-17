@@ -157,47 +157,11 @@ $(document).ready(function(){
         
         
         
-//        var timer = setInterval(mv_slide, 10000)
-        
         function mv_slide(){
             slideMove(curr+1)
         }
         
         
-        
-//        
-//        var startX, endX;
-//        var drag_cnt = 0;
-//
-//
-//    $('.slides a').on('mousedown',function(e){
-//
-//    e.preventDefault();e.stopPropagation()
-//     startX=e.pageX || e.originalEvent.touches[0].pageX;
-//
-//
-//    });
-//
-//
-//
-//
-//
-//    $('.slides a').on('mouseup',function(e){
-//
-//    e.preventDefault();e.stopPropagation()
-//     endX=e.pageX || e.originalEvent.changedTouches[0].pageX;
-//
-//
-//
-//     if(startX+10 < endX) {
-//
-//         drag_cnt = -1
-//     }else if(startX-10 > endX){      
-//         drag_cnt = 1
-//     }
-//
-//         slideMove(curr+drag_cnt)
-//     });
         
         
         

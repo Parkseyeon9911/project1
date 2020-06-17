@@ -14,12 +14,14 @@
 <link rel="stylesheet" href="css/gallery.css">
 <link rel="stylesheet" href="css/footer.css">
 <link rel="stylesheet" href="css/page_load.css">
+<link rel="stylesheet" href="css/gallery.css">
 
 <script src="js/prefixfree.min.js"></script>
 <script src="js/jquery-1.12.4.min.js"></script>
 <script src="js/jquery-migrate-1.4.1.min.js"></script>
 <script src="js/jquery.transit.js"></script>
 <script src="js/common.js"></script>
+<script src="js/gallery.js"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet">
@@ -41,180 +43,6 @@
     <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 
-<style>
-/*
-    
-    html,body{
-        background:url(images/pg_loading_background2.jpg) center center no-repeat;
-        background-size: cover;
-*/
-/*    }*/
-    
-        #wrap{
-        position: relative;
-        top: 0;
-        left:0px;
-        clear: both;
-        float: none;
-        display: block;
-        margin-left: 70px;
-        width: auto;
-        height: 100%;
-    }
-    
-    body{
-        background:url(images/pg_loading_background2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-
-    section{
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-    article{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        background:url(images/pg_loading_background2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    .display1{
-        overflow: hidden;
-    }
-    
-    .display1 img{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-    }
-    
-    .dp1_title{
-        position: fixed;
-        left: 0;
-        display: block;
-        bottom: 60%;
-        width: 90%;
-        text-align: right;
-        margin-right: 0;
-        font-weight: bold;
-        font-size: 10em;
-        margin: 5%;
-        color: #000;
-        z-index: 0;
-    }
-    
-    .display1{
-        background: url(images/pg_loading_background2.jpg) center center no-repeat;
-        background-size: cover;
-    }
-    
-    
-    
-    
-/*아티클1*/
-    
-    
-/*    아티클2*/
-    .display2{
-    width: 100%;
-    height: auto;
-        padding-top: 3%;
-}
-
-.img_gallery{
-    column-count: 4;
-    column-gap: 1.5em;
-/*    background-color: #000;*/
-    overflow: hidden;
-    display: block;
-}
-    
-    
-    
-.img_content{
-    display: inline-block;
-    margin: 0 0 1.5em;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    filter: grayscale(100%);
-    transition: 0.5s;
-}
-    
-    .p_box{
-        background-color: #fff;
-        padding: 2%;
-        display: none;
-    }
-    
-    .p_box .title{
-        text-align: center;
-        font-size: 1.2em;
-    }
-    
-    .p_box .subj{
-        font-size: 0.8em;
-    }
-    
-    
-.img_content li img{
-        width: 100%;
-    }
-/* 메인 슬라이드*/
-
-
-/*메인슬라이드 인디케이트*/
-
-    
-    
-    
-@media screen and (max-width:1024px) {
-#content{ width:auto; margin:0; }
-    
-    #wrap{
-        margin-left: 0px;
-    }
-    
-    .dp1_title{
-        text-align: center;
-    }
-    }
-@media screen and (max-width:768px) {
-    
-    .display1{
-        height: 80%;
-    }
-    .img_gallery{
-    column-count: 3;
-}
-    
-    
-    .dp1_title{
-        font-size: 7em;
-    }
-    }
-
-@media screen and (max-width:640px) {
-    .img_gallery{
-    column-count: 2;
-}
-    
-    
-    .dp1_title{
-        font-size: 5em;
-    }
-    
-    }
-    
-    
-    
-</style>
 </head>
 
 <body>
@@ -223,14 +51,14 @@
 	<section>    
         <article class="display1" id="content1">
         <p class="dp1_title line_txt bold">GALLERY</p>
-        <img src="images/gallery_dp1_background.png" alt="" width="100%">
+        <img src="images/gallery_dp1_background.png" alt="나사 갤러리 메인 사진" width="100%">
 	</article>
 	<article class="display2" id="content2">
 	    
 	    <ul class="img_gallery">
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery1.jpg" alt="">
+	                <img src="images/gallery/gallery1.jpg" alt="나사 갤러리 이미지1">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -239,7 +67,7 @@
 	        </a>
 	        <a href="#" class="img_content size_2xl">
 	            <li>
-	                <img src="images/gallery/gallery2.jpg" alt="">
+	                <img src="images/gallery/gallery2.jpg" alt="나사 갤러리 이미지2">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -248,17 +76,7 @@
 	        </a>
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery3.jpg" alt="">
-	                <div class="p_box">
-	                <p class="title">ISS Maintenance</p>
-	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
-	                </div>
-	            </li>
-	        </a>
-	        
-	        <a href="#" class="img_content">
-	            <li>
-	                <img src="images/gallery/gallery4.jpg" alt="">
+	                <img src="images/gallery/gallery3.jpg" alt="나사 갤러리 이미지3">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -268,13 +86,7 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery5.jpg" alt="">
-	            </li>
-	        </a>
-	        
-	        <a href="#" class="img_content">
-	            <li>
-	                <img src="images/gallery/gallery6.jpg" alt="">
+	                <img src="images/gallery/gallery4.jpg" alt="나사 갤러리 이미지4">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -284,7 +96,13 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery7.jpg" alt="">
+	                <img src="images/gallery/gallery5.jpg" alt="나사 갤러리 이미지5">
+	            </li>
+	        </a>
+	        
+	        <a href="#" class="img_content">
+	            <li>
+	                <img src="images/gallery/gallery6.jpg" alt="나사 갤러리 이미지6">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -294,7 +112,7 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery8.jpg" alt="">
+	                <img src="images/gallery/gallery7.jpg" alt="나사 갤러리 이미지7">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -304,7 +122,7 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery9.jpg" alt="">
+	                <img src="images/gallery/gallery8.jpg" alt="나사 갤러리 이미지8">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -314,7 +132,7 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery10.jpg" alt="">
+	                <img src="images/gallery/gallery9.jpg" alt="나사 갤러리 이미지9">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -324,7 +142,17 @@
 	        
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery11.jpg" alt="">
+	                <img src="images/gallery/gallery10.jpg" alt="나사 갤러리 이미지10">
+	                <div class="p_box">
+	                <p class="title">ISS Maintenance</p>
+	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
+	                </div>
+	            </li>
+	        </a>
+	        
+	        <a href="#" class="img_content">
+	            <li>
+	                <img src="images/gallery/gallery11.jpg" alt="나사 갤러리 이미지11">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -333,7 +161,7 @@
 	        </a>
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery12.jpg" alt="">
+	                <img src="images/gallery/gallery12.jpg" alt="나사 갤러리 이미지12">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -342,7 +170,7 @@
 	        </a>
 	        <a href="#" class="img_content">
 	            <li>
-	                <img src="images/gallery/gallery13.jpg" alt="">
+	                <img src="images/gallery/gallery13.jpg" alt="나사 갤러리 이미지13">
 	                <div class="p_box">
 	                <p class="title">ISS Maintenance</p>
 	                <p class="subj">NASA astronaut Sunita Williams, Expedition 32 flight engineer, appears to touch the bright sun during the mission?s third session of extravehicular activity</p>
@@ -355,155 +183,5 @@
 <? include 'footer.html' ?>
 	</section>
 </div>		
-<script>
-    
-
-    $(document).ready(function(){
-        
-                
-        
-        
-        var screenSize = $(window).width();
-		var screenHeight = $(window).height();
-  	    var current=false;
-        
-        
-        $('.img_content').hover(function(e){
-//            console.log('동작')
-            $(this).css({
-                 filter: 'none'
-            })
-            
-            $(this).find('.p_box').stop().slideDown('slow')
-            
-        },
-                                
-            function(){
-            $(this).css({
-            filter: 'grayscale(100%)'
-            })
-            
-            $(this).find('.p_box').stop().slideUp('slow')
-        })
-        
-//        
-//        $('.img_content').hover(function(e){
-//            $(this).css({
-//                filter:'none'
-//            })
-//        },function(e){e.stopPropagation();
-//            $(this).css({
-//                filter:'none'
-//            })
-//        })
-        
-        
-        
-        
-        
-//        모바일사이즈 이벤트(비디오 감추기)
-		
-  	if(screenSize > 640){
-        
-        
-      }
-    if(screenSize <= 640){
-        
-        
-    }
-        
-    if(screenSize > 768){
-      }
-    if(screenSize <= 768){
-        
-    }
-        
-//      태블릿 사이즈 이벤트 메인타이틀 감추기
-        
-      if(screenSize > 1024){
-           
-      }
-       if(screenSize <= 1024){
-      }
-        
-        
-        
-  	
-//        리사이즈 메소드
-        
-        
-   var nav_current=0;
-   $(window).resize(function(){
-       
-       
-       
-        screenSize = $(window).width();
-		screenHeight = $(window).height();
-       
-       
-//       사이트맵 이벤트
-       
-       if(screenSize > 768){
-           
-      }
-       
-       if(screenSize <=768){
-           
-       }
-       
-       
-       
-       
-       
-       
-      if( screenSize > 640 && current==false){
-      	
-          
-      } 
-       
-      if(screenSize <= 640){
-          
-          
-      }
-//       
-      if(screenSize > 1024){
-           
-      }
-       if(screenSize <= 1024){
-        
-        
-        
-    }
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-//        스크롤 이벤트
-        
-        
-        $(window).scroll(function(){
-            var now_scroll = $(window).scrollTop()
-            
-            
-            
-
-            
-            
-            
-    })
-    })
-    })
-    
-</script>
 </body>
 </html>

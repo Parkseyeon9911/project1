@@ -95,7 +95,7 @@ Capture an amazing moment with Laika photographers.</p>
     <ul class="academy_box">
         <li>
            <p class="academy_title">DAWN TO DUSK</p>
-           <img src="image/academy/academy_banner1.jpg" alt="">
+           <img src="image/academy/academy_banner1.jpg" alt="PHIL PENMAN 아카데미 사진">
             <dl>
                 <dt>Instructor</dt>
                 <dd>PHIL PENMAN</dd>
@@ -107,7 +107,7 @@ Capture an amazing moment with Laika photographers.</p>
         </li>
         <li>
             <p class="academy_title">STREET PHOTOGRAPHY IN-DEPTH</p>
-           <img src="image/academy/academy_banner2.jpg" alt="">
+           <img src="image/academy/academy_banner2.jpg" alt="DOTAN SAGUY 아카데미 사진">
             <dl>
                 <dt>Instructor</dt>
                 <dd>DOTAN SAGUY</dd>
@@ -119,7 +119,7 @@ Capture an amazing moment with Laika photographers.</p>
         </li>
         <li>
             <p class="academy_title">INSIDE THE ARTISTIC PROCESS</p>
-           <img src="image/academy/academy_banner3.jpg" alt="">
+           <img src="image/academy/academy_banner3.jpg" alt="MARK MANN 아카데미 사진">
             <dl>
                 <dt>Instructor</dt>
                 <dd>MARK MANN</dd>
@@ -138,54 +138,5 @@ Capture an amazing moment with Laika photographers.</p>
    
     
 </body>
-
-<script>
-$(document).ready(function() {
-    $('.academy_box li').addClass('objscale_ani')
-    $('#wrap').scroll(function(e){
-    var now_scroll = $(this).scrollTop();
-//        console.log(now_scroll)
-        $('.academy_box li').each(function(i,ee){
-//         console.log(i)
-            if(now_scroll >  $('.academy_box li').eq(i).offset().top+$('.academy_box li').eq(i).outerHeight()){
-            $('.academy_box li').eq(i).css({
-                animationPlayState:'running'
-            })
-            }
-            else{
-                
-            }
-        })
-//            
-//            if(now_scroll >  $('article').eq(i).offset().top+$('article').eq(i).height()){
-//            
-//            $('article').eq(i).children().css({
-//                animationPlayState:'running'
-//            })
-//                
-//            if($('.short_cut_box').css('animation-play-state') == 'running'){
-//                
-//                
-//                setTimeout(function(){
-//                $('.short_cut_box').children().css({
-//                animationPlayState:'running'
-//                })
-//                $('.short_cut_box ul').children().css({
-//                animationPlayState:'running'
-//                })
-//               },500)
-//}
-//        }})
-})
-})
-    
-</script>
-
-
-
-
-
-
-
 
 </html>

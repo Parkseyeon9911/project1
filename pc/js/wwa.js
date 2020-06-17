@@ -18,15 +18,13 @@
         var article_offtop = $('article').offset().top/100;
         var graypercent = Math.floor(now_scroll/article_offtop);
         var scaleperscent = graypercent/100;
-//        console.log(article_offtop)
         if(scaleperscent > 1){
             scaleperscent = 1
         }
         console.log(scaleperscent);
         
         $('.dp1_background').css({
-            filter:'grayscale('+graypercent+'%)',
-//            filter:'blur('+graypercent+'px)'
+            filter:'grayscale('+graypercent+'%)'
         })
         
         $('.dp1_title').css({

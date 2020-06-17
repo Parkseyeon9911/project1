@@ -153,9 +153,6 @@
             height:'auto',
             marginBottom:'30px'
         })
-//        $(this).find('.faq_title').css({
-//            color:'#e1262a'
-//        })
         }
         
         else{
@@ -164,9 +161,6 @@
             marginBottom:'0px'
         })
             
-//        $(this).find('.faq_title').css({
-//            color:'#fff'
-//        })
         }
     })
         
