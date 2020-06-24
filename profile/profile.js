@@ -15,19 +15,19 @@
                         $('.black_screen').css({
                                display:'block'
                            })
-                    },2000)
+                    },500)
         
                     setTimeout(function(){
                            $('.booting').css({
                                animationPlayState:'running'
                            })
-                    },2100)
+                    },600)
         
                     setTimeout(function(){
                             $('.black_screen').css({
                                display:'none'
                            })
-                    },2600)
+                    },1100)
                     
         
                     setTimeout(function(){
@@ -39,7 +39,8 @@
 						}
 
 						var instance = new tinytyper(el, options);
-                    },3000)
+
+                    },1100)
         
 						
 					}
@@ -60,10 +61,13 @@
         sectionScr(indi_num)
     })
         
+
         
         
     $('html,body').on('mousewheel DOMMouseScroll',function(e){
         
+        
+        if($('.noise').css('display') == 'none'){
         
         if(curr == 6){
             moving = false
@@ -104,6 +108,7 @@
             
         sectionScr(delta+curr)
         }
+        }
     })
         
         
@@ -125,7 +130,6 @@
         
         var tt = -curr*100+"%"
         
-                    
         
         $('section').stop().animate({
             left: tt
@@ -133,7 +137,6 @@
         1000,function(){
             moving = true
         })
-        
 
             
             
