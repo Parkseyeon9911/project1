@@ -71,14 +71,14 @@
         
         if(curr == 6){
             moving = false
-            if(e.originalEvent.wheelDelta > 0 && $('#content7').scrollTop() == 0 || e.originalEvent.detail < 0 && $('#content7').scrollTop() == 0){
+            if(e.originalEvent.wheelDelta > 0 && $('.display7').scrollTop() == 0 || e.originalEvent.detail < 0 && $('.display7').scrollTop() == 0){
             moving = true
             delta = -1
             
         sectionScr(delta+curr)
            }
             
-            else if(e.originalEvent.wheelDelta < 0 && $('#content7').scrollTop() + $(window).height() >= $('.gallery_box').height() || e.originalEvent.detail > 0 && $('#content7').scrollTop() + $(window).height() >= $('.gallery_box').height()){
+            else if(e.originalEvent.wheelDelta < 0 && $('.display7').scrollTop() + $(window).height() >= $('.gallery_box').height() || e.originalEvent.detail > 0 && $('.display7').scrollTop() + $(window).height() >= $('.gallery_box').height()){
             moving = true
             delta = 1
                 
@@ -150,13 +150,6 @@
 
 						var instance = new tinytyper(el, options);
         }    
-//            
-            
-            
-        
-        $('.indicate > a').eq(curr).addClass('now')
-        $('.indicate > a').not($(".indicate > .indicate_circle").eq(curr)).removeClass('now')
-            
             
     }
         
